@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:MyCompany.Model"
+             x:Class="MyCompany.Flights"
+             Title="">
+    <Shell.TitleView>
+        <Image x:Name="toolbarimage" Source="logo.png"
+           HorizontalOptions="Center"
+           VerticalOptions="Center" WidthRequest="35" HeightRequest="35"/>
+    </Shell.TitleView>
+    <ContentPage.ToolbarItems>
+
+        <ToolbarItem Text="&lt;Back" Clicked="BackDate" />
+        <ToolbarItem x:Name="date_out" Text="Refresh" />
+        <ToolbarItem Text="Next>" Clicked="NextDate"/>
+    </ContentPage.ToolbarItems>
+
+
+    <Grid ColumnDefinitions="*,*"
+          ColumnSpacing="5"
+          RowDefinitions="*,Auto,Auto"
+          RowSpacing="0">
+
+        <CollectionView x:Name="flightcollectionview" BackgroundColor="Transparent"
+                            Grid.ColumnSpan="2"
+                            SelectionMode="None"
+                            >
+            <CollectionView.EmptyView>
+                <StackLayout Padding="10">
+                    <Image HorizontalOptions="FillAndExpand"
+                                Source="logo.png"
+                                VerticalOptions="FillAndExpand"
+                               />
+                </StackLayout>
+            </CollectionView.EmptyView>
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical"
+                                     Span="{OnIdiom Desktop=2,Default=1}">
+
+                </GridItemsLayout>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:Flight_info">
+                    <Grid Padding="5">
+                        <Frame HeightRequest="100" Padding="0" HorizontalOptions="FillAndExpand" Style="{StaticResource CardView}">
+                            <Grid Padding="0" ColumnDefinitions="40,Auto,*">
+                                <Frame WidthRequest="40" HeightRequest="40" 
+                                    Grid.Column="0"
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="Center"
+                                    CornerRadius="20"
+                                    IsClippedToBounds="True"
+                                    Padding="0"
+                                    BackgroundColor="{StaticResource Primary}">
+                                    <Label Text="{Binding index}" Padding="10" HorizontalOptions="Start" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" WidthRequest="40" HeightRequest="40" TextColor="{StaticResource LabelTextDark}" Style="{StaticResource SmallLabelBold}"/>
+                                </Frame>                                 
+                                <VerticalStackLayout VerticalOptions="Center" Grid.Column="1">
+                                    <Image Aspect="AspectFit" WidthRequest="125" HeightRequest="50" 
+                                       Source="{Binding logo}">
+                                    </Image>
+                                    <HorizontalStackLayout Grid.Row="1" HorizontalOptions="Center">
+                                        <Label HorizontalOptions="Center" VerticalOptions="Center" Style="{StaticResource SmallLabel}">
+                                            <Label.Text>
+                                                <MultiBinding StringFormat="{}{0}{1} ">
+                                                    <Binding Path="linecode" />
+                                                    <Binding Path="number" />
+                                                </MultiBinding>
+                                            </Label.Text>
+                                        </Label>
+                                        <Image Aspect="AspectFit" VerticalOptions="Center" Source="locationicon.png" WidthRequest="15" HeightRequest="15"/>
+                                        <Label VerticalOptions="Center" Text="{Binding city}" Style="{StaticResource SmallLabel}"/>
+                                    </HorizontalStackLayout>
+                                </VerticalStackLayout>
+                                <VerticalStackLayout Grid.Column="2" Padding="10" VerticalOptions="Center">
+                                    <Label Text="{Binding schedule_display}" Style="{StaticResource SmallLabelItalic}"/>
+                                    <Label Text="{Binding mostconfident_display}" Style="{StaticResource SmallLabelItalic}"/>
+                                    <HorizontalStackLayout>
+                                        <Image Aspect="AspectFit" VerticalOptions="Center" Source="{Binding display_icon1}" WidthRequest="20" HeightRequest="20"/>
+                                        <Label Text=" " Style="{StaticResource SmallLabel}"/>
+                                        <Label Text="{Binding display_icon1_value}" VerticalOptions="Center" Style="{StaticResource SmallLabel}"/>
+                                        <Label Text=" " VerticalOptions="Center" Style="{StaticResource SmallLabel}"/>
+                                        <Image Aspect="AspectFit" VerticalOptions="Center" Source="{Binding display_icon2}" WidthRequest="20" HeightRequest="20"/>
+                                        <Label Text=" " Style="{StaticResource SmallLabel}"/>
+                                        <Label Text="{Binding display_icon2_value}" VerticalOptions="Center" Style="{StaticResource SmallLabel}"/>
+                                        <Image Aspect="AspectFit" VerticalOptions="Center" Source="flightstatusicon.png" WidthRequest="20" HeightRequest="20"/>
+                                        <Label Text=" " Style="{StaticResource SmallLabel}"/>
+                                        <Label Text="{Binding status}" VerticalOptions="Center" Style="{StaticResource SmallLabel}"/>
+                                    </HorizontalStackLayout>
+                                    
+                                </VerticalStackLayout>
+                                
+                            </Grid>
+
+                        </Frame>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Grid Margin="0,5" Grid.Row="1"  Grid.ColumnSpan="2">
+            <Frame Opacity="0.3" BackgroundColor="White" CornerRadius="5"/>
+            <Entry x:Name="text_in"  BackgroundColor="Transparent" Placeholder="Flight Number/ Airlines" 
+                           TextColor="Black" Margin="5,0"
+                           PlaceholderColor="Gray" />
+        </Grid>
+        
+
+        <Button x:Name="Departure_but" Text="Departure" Grid.Row="2" Margin="8" Style="{StaticResource ButtonOutline}" Clicked="GetDepartureFlights">
+        </Button>
+        <Button x:Name="Arrival_but" Text="Arrival" Grid.Row="2" Grid.Column="1" Margin="8" Style="{StaticResource ButtonOutline}"  Clicked="GetArrivalFlights">
+        </Button>
+
+        <ActivityIndicator x:Name="ActivityIndicatorin"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="CenterAndExpand"
+                           Grid.RowSpan="2"
+                           Grid.ColumnSpan="2"
+                           >
+        </ActivityIndicator>
+
+
+    </Grid>
+</ContentPage>

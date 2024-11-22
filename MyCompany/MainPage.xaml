@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyCompany.MainPage"
+             Title="Truy Cập">
+    <ScrollView>
+        <Grid RowDefinitions="*,Auto,Auto"
+          RowSpacing="0">
+                
+        
+        <StackLayout Margin="20">
+                <Image Source="logo.png"  Aspect="AspectFit" HeightRequest="100"  WidthRequest="300" HorizontalOptions="CenterAndExpand"/>
+
+            <StackLayout Margin="0,0">
+                <Label Style="{StaticResource welcome}" FontSize="32" Text="Welcome Back"/>
+                <Label x:Name="statusout" Style="{StaticResource welcome}" FontSize="16" Text="Sign in to continue"/>
+            </StackLayout>
+
+            <StackLayout>
+                <Label FontFamily="OpenSansRegular" TextColor="{StaticResource TextPrimaryColor}" 
+                       FontSize="16" Text="Username"/>
+                <Grid Margin="0,5">
+                    <Frame Opacity="0.3" BackgroundColor="White" CornerRadius="5"/>
+                    <Entry x:Name="usernamein" BackgroundColor="Transparent" Placeholder="Enter username" 
+                           TextColor="Black" Margin="5,0"
+                           PlaceholderColor="Gray" />
+
+                </Grid>
+
+                <Label FontFamily="OpenSansRegular" TextColor="{StaticResource TextPrimaryColor}" 
+                       FontSize="16" Text="Password"/>
+                <Grid Margin="0,5">
+                    <Frame Opacity="0.3" BackgroundColor="White" CornerRadius="5"/>
+                    <Entry x:Name="passwordin" BackgroundColor="Transparent" Placeholder="Enter password" 
+                           TextColor="Black" Margin="5,0"
+                           PlaceholderColor="Gray" IsPassword="True"/>
+
+                </Grid>
+                <HorizontalStackLayout VerticalOptions="Center">
+                    <CheckBox x:Name="remember_but"></CheckBox>
+                    <Label FontFamily="OpenSansRegular" TextColor="{StaticResource TextPrimaryColor}" 
+                       FontSize="16" Text="Remember me" VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+                
+            </StackLayout>
+
+            <Button Margin="0,15" 
+                    Text="Sign in"
+                    Style="{StaticResource ButtonOutline}"
+                    Clicked="SigninAsync"/>
+        </StackLayout>
+            <Label Text="Beta Version" HorizontalOptions="Center" VerticalOptions="End" Style="{StaticResource welcome}"/>
+        <ActivityIndicator x:Name="ActivityIndicatorin"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="CenterAndExpand"
+                           Grid.RowSpan="2"
+                           Grid.ColumnSpan="2"
+                           >
+        </ActivityIndicator>
+        
+        </Grid>
+        
+    </ScrollView>
+</ContentPage>

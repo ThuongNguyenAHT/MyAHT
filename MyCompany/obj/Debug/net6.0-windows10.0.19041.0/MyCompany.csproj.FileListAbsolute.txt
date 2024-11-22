@@ -1,0 +1,12 @@
+D:\Dropbox\Programming\MyCompany\MyCompany\MyCompany\obj\Debug\net6.0-windows10.0.19041.0\MyCompany.Properties.Resources.resources
+D:\Dropbox\Programming\MyCompany\MyCompany\MyCompany\obj\Debug\net6.0-windows10.0.19041.0\MyCompany.csproj.GenerateResource.cache
+D:\Dropbox\Programming\MyCompany\MyCompany\MyCompany\obj\Debug\net6.0-windows10.0.19041.0\MyCompany.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dropbox\Programming\MyCompany\MyCompany\MyCompany\obj\Debug\net6.0-windows10.0.19041.0\MyCompany.AssemblyInfoInputs.cache
+D:\Dropbox\Programming\MyCompany\MyCompany\MyCompany\obj\Debug\net6.0-windows10.0.19041.0\MyCompany.AssemblyInfo.cs
+D:\Dropbox\Programming\MyCompany\MyCompany\MyCompany\obj\Debug\net6.0-windows10.0.19041.0\MyCompany.csproj.CoreCompileInputs.cache
+C:\Users\HuyTruong\Desktop\MyCompany\MyCompany\obj\Debug\net6.0-windows10.0.19041.0\MyCompany.Properties.Resources.resources
+C:\Users\HuyTruong\Desktop\MyCompany\MyCompany\obj\Debug\net6.0-windows10.0.19041.0\MyCompany.csproj.GenerateResource.cache
+C:\Users\HuyTruong\Desktop\MyCompany\MyCompany\obj\Debug\net6.0-windows10.0.19041.0\MyCompany.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HuyTruong\Desktop\MyCompany\MyCompany\obj\Debug\net6.0-windows10.0.19041.0\MyCompany.AssemblyInfoInputs.cache
+C:\Users\HuyTruong\Desktop\MyCompany\MyCompany\obj\Debug\net6.0-windows10.0.19041.0\MyCompany.AssemblyInfo.cs
+C:\Users\HuyTruong\Desktop\MyCompany\MyCompany\obj\Debug\net6.0-windows10.0.19041.0\MyCompany.csproj.CoreCompileInputs.cache

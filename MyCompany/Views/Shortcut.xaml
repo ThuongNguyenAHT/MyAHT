@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:MyCompany.Model"
+             x:Class="MyCompany.Shortcut"
+             Title="Liên kết">
+
+    <Grid>
+
+        <CollectionView x:Name="shortcutcollectionview" BackgroundColor="Transparent"
+                            Grid.ColumnSpan="2"
+                            SelectionMode="None"
+                            >
+            <CollectionView.EmptyView>
+                <StackLayout Padding="10">
+                    <Image HorizontalOptions="CenterAndExpand"
+                                Source="logo.png"
+                                VerticalOptions="CenterAndExpand"
+                               />
+                </StackLayout>
+            </CollectionView.EmptyView>
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical"
+                                     Span="{OnIdiom Desktop=2,Default=1}">
+
+                </GridItemsLayout>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:Shortcut_Link">
+                    <Grid Padding="1">
+                        <Frame HeightRequest="50" Padding="1" VerticalOptions="Center" HorizontalOptions="Start"  Style="{StaticResource CardView}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="GoToLinkAsync"/>
+                            </Frame.GestureRecognizers>
+                            <Grid>
+                                <HorizontalStackLayout>
+                                    <Label Text="---" IsVisible="{Binding Shortcut_name_isheader}" Padding="10" VerticalOptions="Center" HorizontalOptions="Center" Style="{StaticResource SmallLabel}"/>
+                                    <Label Text="{Binding Shortcut_name}" Padding="10" VerticalOptions="Center" HorizontalOptions="StartAndExpand" Style="{StaticResource welcome}"/>
+                                </HorizontalStackLayout>
+                                
+                            </Grid>
+                            
+                        </Frame>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <ActivityIndicator x:Name="ActivityIndicatorin"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="CenterAndExpand"
+                           Grid.RowSpan="2"
+                           Grid.ColumnSpan="2"
+                           >
+        </ActivityIndicator>
+
+
+    </Grid>
+</ContentPage>

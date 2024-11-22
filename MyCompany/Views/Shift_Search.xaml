@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:MyCompany.Model"
+             x:Class="MyCompany.Shift_Search"
+             Title="Tìm kiếm ca">
+    <Grid RowDefinitions="Auto,*">
+        <HorizontalStackLayout Grid.Row="0">
+            <Button x:Name="tab1_but" Text="Danh sách nhân sự" Grid.ColumnSpan="2" Margin="8" Style="{StaticResource ButtonOutline}" Clicked="tab1_visible"/>
+            <Button x:Name="tab2_but" Text="Tra cứu ca cho cá nhân"  Grid.ColumnSpan="2" Margin="8" Style="{StaticResource ButtonOutline_selected}" Clicked="tab2_visible"/>
+        </HorizontalStackLayout>
+        <Grid x:Name="tab1" ColumnDefinitions="*,*"
+            ColumnSpacing="1"
+            RowDefinitions="Auto,*,Auto"
+            RowSpacing="0" Grid.Row="1" IsVisible="false">
+            <HorizontalStackLayout Grid.Row="0" Grid.ColumnSpan="2">
+                <Label Text="Thời gian:" Style="{StaticResource SmallLabelBold}"  HorizontalOptions="Center" VerticalOptions="Center"/>
+                <TimePicker x:Name="time_picker" HorizontalOptions="Center" VerticalOptions="Center" />
+                <Label Text="Ngày:" Style="{StaticResource SmallLabelBold}"  HorizontalOptions="Center" VerticalOptions="Center"/>
+                <DatePicker x:Name="date_picker" HorizontalOptions="Center" VerticalOptions="Center" Format="dd-MM-yyyy"/>
+            </HorizontalStackLayout>
+
+
+            <CollectionView x:Name="shiftcollectionview" Grid.Row="1" BackgroundColor="Transparent"
+                            Grid.ColumnSpan="2"
+                            SelectionMode="None"
+                            >
+                <CollectionView.EmptyView>
+                    <StackLayout Padding="10">
+                        <Image HorizontalOptions="FillAndExpand"
+                                Source="logo.png"
+                                VerticalOptions="FillAndExpand"
+                                />
+                    </StackLayout>
+                </CollectionView.EmptyView>
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical"
+                                        Span="{OnIdiom Desktop=2,Default=1}">
+
+                    </GridItemsLayout>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:Shift_info">
+                        <Grid Padding="0">
+                            <Frame HeightRequest="60" Padding="0" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Style="{StaticResource CardView}">
+                                <Grid Padding="0"
+                                        ColumnDefinitions="40,*,*">
+                                    <Frame WidthRequest="40" HeightRequest="40" 
+                                    Grid.Column="0"
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="Center"
+                                    CornerRadius="20"
+                                    IsClippedToBounds="True"
+                                    Padding="0"
+                                    BackgroundColor="{StaticResource Primary}">
+                                        <Label Text="{Binding index}" Padding="10" HorizontalOptions="Start" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" WidthRequest="40" HeightRequest="40" TextColor="{StaticResource LabelTextDark}" Style="{StaticResource SmallLabelBold}"/>
+                                    </Frame>
+
+                                    <VerticalStackLayout VerticalOptions="Center" Grid.Column="1">
+                                        <Label VerticalOptions="Center" Text="{Binding FullName}" Style="{StaticResource SmallLabelBold}"/>
+                                        <Label Text="{Binding Department}" Style="{StaticResource SmallLabelItalic}" Padding="0" VerticalOptions="Center"/>
+                                    </VerticalStackLayout>
+                                    <VerticalStackLayout Grid.Column="2" Padding="0" VerticalOptions="Center">
+                                        <Label Text="{Binding ChucDanh}" Style="{StaticResource SmallLabel}" Padding="0" VerticalOptions="Center"/>
+                                        <Label Text="{Binding ShiftCodeVN}" Style="{StaticResource SmallLabelItalic}" Padding="0" VerticalOptions="Center"/>
+                                    </VerticalStackLayout>
+                                </Grid>
+                            </Frame>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Button Text="Lấy danh sách" Grid.ColumnSpan="2" Grid.Row="2" Margin="8" Style="{StaticResource ButtonOutline}" Clicked="GetShiftList">
+            </Button>
+
+            <ActivityIndicator x:Name="ActivityIndicatorin"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            Grid.RowSpan="3"
+                            Grid.ColumnSpan="2"
+                            >
+            </ActivityIndicator>
+        </Grid>
+        <Grid x:Name="tab2" ColumnDefinitions="*,*"
+              ColumnSpacing="1"
+              RowDefinitions="Auto,*,Auto"
+              RowSpacing="0" Grid.Row="1">
+            <Grid Padding="5">
+                <VerticalStackLayout Grid.Row="0" Grid.ColumnSpan="3" >
+                    <HorizontalStackLayout Padding="-5">
+
+                        <Label Text="Tên nhân viên:" Style="{StaticResource SmallLabelBold}"  HorizontalOptions="Start" VerticalOptions="Center"/>
+                        <Grid Margin="0,5">
+                            <Frame Opacity="0.3" BackgroundColor="White" CornerRadius="5"/>
+                            <Entry x:Name="tab2_name_in" BackgroundColor="Transparent" Placeholder="Enter Name" 
+                   TextColor="Black" Margin="5,0"
+                   PlaceholderColor="Gray" />
+                        </Grid>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout Padding="-5" >
+                        <Label Text="Ngày bắt đầu:" Style="{StaticResource SmallLabelBold}"  HorizontalOptions="Start" VerticalOptions="Center"/>
+                        <DatePicker x:Name="tab2_date_picker_start" HorizontalOptions="Center" VerticalOptions="Center" Format="dd-MM-yyyy"/>
+
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout Padding="-5">
+                        <Label Text="Ngày kết thúc:" Style="{StaticResource SmallLabelBold}"  HorizontalOptions="Start" VerticalOptions="Center"/>
+                        <DatePicker x:Name="tab2_date_picker_end" HorizontalOptions="Center" VerticalOptions="Center" Format="dd-MM-yyyy"/>
+                    </HorizontalStackLayout>
+
+                </VerticalStackLayout>
+            </Grid>
+            
+
+            <CollectionView x:Name="tab2_shiftcollectionview" Grid.Row="1" BackgroundColor="Transparent"
+                                Grid.ColumnSpan="2"
+                                SelectionMode="None"
+                                >
+                <CollectionView.EmptyView>
+                    <StackLayout Padding="10">
+                        <Image HorizontalOptions="FillAndExpand"
+                                    Source="logo.png"
+                                    VerticalOptions="FillAndExpand"
+                                    />
+                    </StackLayout>
+                </CollectionView.EmptyView>
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical"
+                                         Span="{OnIdiom Desktop=2,Default=1}">
+
+                    </GridItemsLayout>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:Shift_date_info">
+                        <Grid Padding="0">
+                            <Frame HeightRequest="60" Padding="0" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Style="{StaticResource CardView}">
+                                <Grid Padding="0"
+                                          ColumnDefinitions="40,*,*">
+                                    <Frame WidthRequest="40" HeightRequest="40" 
+                                        Grid.Column="0"
+                                        VerticalOptions="Center" 
+                                        HorizontalOptions="Center"
+                                        CornerRadius="20"
+                                        IsClippedToBounds="True"
+                                        Padding="0"
+                                        BackgroundColor="{StaticResource Primary}">
+                                        <Label Text="{Binding index}" Padding="10" HorizontalOptions="Start" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" WidthRequest="40" HeightRequest="40" TextColor="{StaticResource LabelTextDark}" Style="{StaticResource SmallLabelBold}"/>
+                                    </Frame>
+
+                                    <VerticalStackLayout VerticalOptions="Center" Grid.Column="1">
+                                        <Label VerticalOptions="Center" Text="{Binding FullName}" Style="{StaticResource SmallLabelBold}"/>
+                                        <Label  Style="{StaticResource SmallLabelItalic}" Padding="0" VerticalOptions="Center">
+                                            <Label.Text>
+                                                <MultiBinding StringFormat="{}{0} | {1}">
+                                                    <Binding Path="Shiftdate" />
+                                                    <Binding Path="Shiftdateofweek" />
+                                                </MultiBinding>
+                                            </Label.Text>
+
+                                        </Label>
+                                    </VerticalStackLayout>
+                                    <VerticalStackLayout Grid.Column="2" Padding="0" VerticalOptions="Center">
+                                        <Label Text="{Binding ChucDanh}" Style="{StaticResource SmallLabel}" Padding="0" VerticalOptions="Center"/>
+                                        <Label Text="{Binding ShiftCodeVN}" Style="{StaticResource SmallLabelItalic}" Padding="0" VerticalOptions="Center"/>
+                                    </VerticalStackLayout>
+                                </Grid>
+                            </Frame>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Button Text="Lấy danh sách" Grid.ColumnSpan="2" Grid.Row="2" Margin="8" Style="{StaticResource ButtonOutline}" Clicked="tab2_GetShiftList">
+            </Button>
+
+            <ActivityIndicator x:Name="tab2_ActivityIndicatorin"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalOptions="CenterAndExpand"
+                               Grid.RowSpan="3"
+                               Grid.ColumnSpan="2"
+                               >
+            </ActivityIndicator>
+
+
+        </Grid>
+    </Grid>
+</ContentPage>

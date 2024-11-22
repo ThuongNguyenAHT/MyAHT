@@ -1,0 +1,96 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MyCompany"
+             x:Class="MyCompany.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
+                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            
+            <Color x:Key="TextPrimaryColor">#234093</Color>
+            <Color x:Key="PrimaryColor">#234093</Color>
+            <Color x:Key="SecondaryColor">#42c1c7</Color>
+            <Color x:Key="SecondaryColor_darker">#42a8c7</Color>
+            <Color x:Key="LightBackground">#FAF9F8</Color>
+            <Color x:Key="Primary">#234093</Color>
+            <Color x:Key="PrimaryDark">#FFA000</Color>
+            <Color x:Key="CardBackground">White</Color>
+            <Color x:Key="CardBackgroundDark">Black</Color>
+            <Color x:Key="LabelText">#234093</Color>
+            <Color x:Key="LabelTextDark">White</Color>
+            
+            <Style x:Key="welcome" TargetType="Label">
+                <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource LabelText}, Dark={StaticResource LabelTextDark}}" />
+                <Setter Property="FontFamily" Value="Sitka" />
+            </Style>
+            <Style x:Key="welcome_bigsize" TargetType="Label">
+                <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource LabelText}, Dark={StaticResource LabelTextDark}}" />
+                <Setter Property="FontFamily" Value="Sitka" />
+                <Setter Property="FontSize" Value="32"/>
+            </Style>
+
+            <Style x:Key="ButtonOutline" TargetType="Button">
+                <Setter Property="Background" Value="{StaticResource LabelTextDark}"/>
+                <Setter Property="TextColor" Value="{StaticResource TextPrimaryColor}"/>
+                <Setter Property="BorderColor" Value="{StaticResource TextPrimaryColor}"/>
+                <Setter Property="BorderWidth" Value="2"/>
+                <Setter Property="HeightRequest" Value="40"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="FontFamily" Value="OpenSansBold"/>
+            </Style>
+            <Style x:Key="ButtonOutline_selected" TargetType="Button">
+                <Setter Property="Background" Value="{StaticResource SecondaryColor}"/>
+                <Setter Property="TextColor" Value="{StaticResource LabelTextDark}"/>
+                <Setter Property="BorderColor" Value="{StaticResource SecondaryColor_darker}"/>
+                <Setter Property="BorderWidth" Value="2"/>
+                <Setter Property="HeightRequest" Value="40"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="FontFamily" Value="OpenSansBold"/>
+            </Style>
+            <Style x:Key="ButtonOutline_unselected" TargetType="Button">
+                <Setter Property="Background" Value="{StaticResource LabelTextDark}"/>
+                <Setter Property="TextColor" Value="{StaticResource TextPrimaryColor}"/>
+                <Setter Property="BorderColor" Value="{StaticResource Primary}"/>
+                <Setter Property="BorderWidth" Value="2"/>
+                <Setter Property="HeightRequest" Value="40"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="FontFamily" Value="OpenSansBold"/>
+            </Style>
+            <Style x:Key="CardView" TargetType="Frame">
+                <Setter Property="BorderColor" Value="#DDDDDD"/>
+                <Setter Property="HasShadow" Value="False"/>
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource CardBackground}, Dark={StaticResource CardBackgroundDark}}"/>  
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="IsClippedToBounds" Value="True"/>
+            </Style>
+            <Style TargetType="Label" x:Key="BaseLabel">
+                <Setter Property="FontFamily" Value="Cambria" />
+                <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource LabelText}, Dark={StaticResource LabelTextDark}}" />
+            </Style>
+            <Style x:Key="LargeLabel" BasedOn="{StaticResource BaseLabel}" TargetType="Label">
+                <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource LabelText}, Dark={StaticResource LabelTextDark}}" />
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="FontFamily" Value="RobotoMedium"/>
+            </Style>
+            <Style x:Key="SmallLabel" BasedOn="{StaticResource BaseLabel}" TargetType="Label">
+                <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource LabelText}, Dark={StaticResource LabelTextDark}}" />
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="FontFamily" Value="RobotoMedium"/>
+            </Style>
+            <Style x:Key="SmallLabelBold" BasedOn="{StaticResource BaseLabel}" TargetType="Label">
+                <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource LabelText}, Dark={StaticResource LabelTextDark}}" />
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="FontFamily" Value="RobotoBold" />
+            </Style>
+            <Style x:Key="SmallLabelItalic" BasedOn="{StaticResource BaseLabel}" TargetType="Label">
+                <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource LabelText}, Dark={StaticResource LabelTextDark}}" />
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="FontFamily" Value="RobotoItalic" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

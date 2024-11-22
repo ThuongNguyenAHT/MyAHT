@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyCompany.Views.DMS_Search"
+             xmlns:model="clr-namespace:MyCompany.Model"
+             Title="Tìm Tài Liệu">
+    <Grid>
+        <Grid x:Name="searchgrid">
+            <VerticalStackLayout>
+                <StackLayout>
+                    <Label Style="{StaticResource welcome}" Padding="5"
+                       FontSize="16" Text="ID của tài liệu:"/>
+                    <Grid Margin="0,5">
+                        <Frame Opacity="0.3" BackgroundColor="White" CornerRadius="5"/>
+                        <Entry x:Name="id_in" BackgroundColor="Transparent" Placeholder="Enter ID" 
+                           TextColor="Black" Margin="5,0"
+                           PlaceholderColor="Gray" />
+                    </Grid>
+
+                    <Label Style="{StaticResource welcome}"  Padding="5"
+                       FontSize="16" Text="Tên của tài liệu:"/>
+                    <Grid Margin="0,5">
+                        <Frame Opacity="0.3" BackgroundColor="White" CornerRadius="5"/>
+                        <Entry x:Name="docname_in" BackgroundColor="Transparent" Placeholder="Enter Doc Name" 
+                           TextColor="Black" Margin="5,0"
+                           PlaceholderColor="Gray" />
+                    </Grid>
+
+                    <Label Style="{StaticResource welcome}"   Padding="5"
+                       FontSize="16" Text="Ngày upload:"/>
+                    <Grid Margin="0,5">
+                        <Frame Opacity="0.3" BackgroundColor="White" CornerRadius="5"/>
+                        <Entry x:Name="uploadate_in" BackgroundColor="Transparent" Placeholder="Enter Upload Date" 
+                           TextColor="Black" Margin="5,0"
+                           PlaceholderColor="Gray" />
+                    </Grid>
+
+                    <Label Style="{StaticResource welcome}" Padding="5"
+                       FontSize="16" Text="Search Key:"/>
+                    <Grid Margin="0,5">
+                        <Frame Opacity="0.3" BackgroundColor="White" CornerRadius="5"/>
+                        <Entry x:Name="searchkey_in" BackgroundColor="Transparent" Placeholder="Enter key" 
+                           TextColor="Black" Margin="5,0"
+                           PlaceholderColor="Gray" />
+                    </Grid>
+
+                    <Label Style="{StaticResource welcome}" Padding="5"
+                       FontSize="16" Text="Phòng/ban:"/>
+                    <Grid Margin="0,5">
+                        <Frame Opacity="0.3" BackgroundColor="White" CornerRadius="5"/>                        
+                        <Picker x:Name="deptname_in" BackgroundColor="Transparent" 
+                           TextColor="Black" Margin="5,0"/>
+                    </Grid>
+                    <Label Style="{StaticResource welcome}" Padding="5"
+                       FontSize="16" Text="Loại tài liệu:"/>
+                    <Grid Margin="0,5">
+                        <Frame Opacity="0.3" BackgroundColor="White" CornerRadius="5"/>
+                        <Picker x:Name="doctype_in" BackgroundColor="Transparent"
+                           TextColor="Black" Margin="5,0"/>
+                    </Grid>
+                    <Label Style="{StaticResource welcome}" Padding="5"
+                       FontSize="16" Text="Công ty:"/>
+                    <Grid Margin="0,5">
+                        <Frame Opacity="0.3" BackgroundColor="White" CornerRadius="5"/>
+                        <Entry x:Name="company_in" BackgroundColor="Transparent" Placeholder="Enter Company Name" 
+                           TextColor="Black" Margin="5,0"
+                           PlaceholderColor="Gray" />
+                    </Grid>
+
+                    <Label Style="{StaticResource welcome}" Padding="5"
+                       FontSize="16" Text="Tác giả:"/>
+                    <Grid Margin="0,5">
+                        <Frame Opacity="0.3" BackgroundColor="White" CornerRadius="5"/>
+                        <Entry x:Name="author_in" BackgroundColor="Transparent" Placeholder="Enter Author Name" 
+                           TextColor="Black" Margin="5,0"
+                           PlaceholderColor="Gray" />
+                    </Grid>
+                </StackLayout>
+
+                <Button Margin="0,15" 
+                    Text="Tìm kiếm" Style="{StaticResource ButtonOutline}"
+                    Clicked="SearchAsync"/>
+            </VerticalStackLayout>
+        </Grid>
+        <Grid x:Name="resultgrid" ColumnDefinitions="*,*"
+          ColumnSpacing="5"
+          RowDefinitions="*,Auto"
+          RowSpacing="0"
+          IsVisible="False">
+
+            <CollectionView x:Name="docscollectionview" BackgroundColor="Transparent"
+                            Grid.ColumnSpan="2"
+                            SelectionMode="None"
+                            >
+                <CollectionView.EmptyView>
+                    <StackLayout Padding="10">
+                        <Image HorizontalOptions="CenterAndExpand"
+                                Source="logo.png"
+                                VerticalOptions="CenterAndExpand"
+                               />
+                    </StackLayout>
+                </CollectionView.EmptyView>
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical"
+                                     Span="{OnIdiom Desktop=2,Default=1}">
+
+                    </GridItemsLayout>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:DMS">
+                        <Grid Padding="5">
+                            <Frame HeightRequest="200" Padding="0" HorizontalOptions="FillAndExpand" Style="{StaticResource CardView}">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="GoToDetailsAsync"/>
+                                </Frame.GestureRecognizers>
+                                    
+                                <Grid Padding="0"
+                                      ColumnDefinitions="40,125,*">
+                                    <Frame WidthRequest="40" HeightRequest="40" 
+                                    Grid.Column="0"
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="Center"
+                                    CornerRadius="20"
+                                    IsClippedToBounds="True"
+                                    Padding="0"
+                                    BackgroundColor="{StaticResource Primary}">
+                                        <Label Text="{Binding index}" Padding="10" HorizontalOptions="Start" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" WidthRequest="40" HeightRequest="40" TextColor="{StaticResource LabelTextDark}" Style="{StaticResource SmallLabelBold}"/>
+                                    </Frame>
+
+                                    <VerticalStackLayout VerticalOptions="Center" Grid.Column="1">
+                                        <Label VerticalOptions="Center" Style="{StaticResource SmallLabelBold}">
+                                            <Label.Text>
+                                                <MultiBinding StringFormat="{}{0}: {1}">
+                                                    <Binding Path="catolog" />
+                                                    <Binding Path="Dms_name" />
+                                                </MultiBinding>
+                                            </Label.Text>
+                                        </Label>
+                                    </VerticalStackLayout>
+
+                                    <VerticalStackLayout Grid.Column="2" Padding="10" VerticalOptions="Center">
+                                        <Label VerticalOptions="Center" Style="{StaticResource SmallLabel}">
+                                            <Label.Text>
+                                                <MultiBinding StringFormat="{}ID: {0}">
+                                                    <Binding Path="Dms_docid" />
+                                                </MultiBinding>
+                                            </Label.Text>
+                                        </Label>
+                                        <Label VerticalOptions="Center" Style="{StaticResource SmallLabel}">
+                                            <Label.Text>
+                                                <MultiBinding StringFormat="{}Tác giả: {0}">
+                                                    <Binding Path="author" />
+                                                </MultiBinding>
+                                            </Label.Text>
+                                        </Label>
+                                        <Label VerticalOptions="Center" Style="{StaticResource SmallLabel}">
+                                            <Label.Text>
+                                                <MultiBinding StringFormat="{}Công ty: {0}">
+                                                    <Binding Path="company" />
+                                                </MultiBinding>
+                                            </Label.Text>
+                                        </Label>
+                                        <Label VerticalOptions="Center" Style="{StaticResource SmallLabel}">
+                                            <Label.Text>
+                                                <MultiBinding StringFormat="{}Phân phối đến: {0}">
+                                                    <Binding Path="depart" />
+                                                </MultiBinding>
+                                            </Label.Text>
+                                        </Label>
+
+                                    </VerticalStackLayout>
+
+                                </Grid>
+
+                            </Frame>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Button Text="Trở về tìm kiếm" Grid.Row="1" Grid.ColumnSpan="2" Margin="8" Style="{StaticResource ButtonOutline}" Clicked="BackSearchAsync">
+            </Button>
+
+            <ActivityIndicator x:Name="ActivityIndicatorin"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="CenterAndExpand"
+                           Grid.RowSpan="2"
+                           Grid.ColumnSpan="2"
+                           >
+            </ActivityIndicator>
+
+
+        </Grid>
+    </Grid>
+    
+    
+</ContentPage>

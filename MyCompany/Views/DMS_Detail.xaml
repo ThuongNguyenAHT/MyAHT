@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyCompany.Views.DMS_Detail"
+             xmlns:model="clr-namespace:MyCompany.Model"
+             Title="Tìm Tài Liệu">
+
+
+    <Grid>
+        
+            
+        <Grid x:Name="resultgrid" ColumnDefinitions="*"
+          ColumnSpacing="5"
+          RowDefinitions="Auto,*,Auto"
+          RowSpacing="0"
+          IsVisible="True">
+            <VerticalStackLayout Padding="10">
+                <Label x:Name="doc_Dms_docid" Text="ID:" VerticalOptions="Center" Style="{StaticResource SmallLabel}"/>
+                <HorizontalStackLayout>
+                    <Label x:Name="doc_catolog" Text="" VerticalOptions="Center" Style="{StaticResource SmallLabel}"/>
+                    <Label Text=": " VerticalOptions="Center" Style="{StaticResource SmallLabel}"/>
+                    <Label x:Name="doc_name" Text="" VerticalOptions="Center" Style="{StaticResource SmallLabel}"/>
+                </HorizontalStackLayout>
+                <Label x:Name="doc_author" Text="Tác giả:" VerticalOptions="Center" Style="{StaticResource SmallLabel}"/>
+                <Label x:Name="doc_company" Text="Công ty: " VerticalOptions="Center" Style="{StaticResource SmallLabel}"/>
+                <Label x:Name="doc_depart" Text="Phân phối đến: " VerticalOptions="Center" Style="{StaticResource SmallLabel}"/>
+            </VerticalStackLayout>
+
+            <CollectionView x:Name="docscollectionview" BackgroundColor="Transparent"
+                            Grid.Row="1"
+                            SelectionMode="None"
+                           >
+                <CollectionView.EmptyView>
+                    <StackLayout Padding="10">
+                        <Image HorizontalOptions="FillAndExpand"
+                                Source="logo.png"
+                                VerticalOptions="FillAndExpand"
+                               />
+                    </StackLayout>
+                </CollectionView.EmptyView>
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical"
+                                     Span="{OnIdiom Desktop=2,Default=1}">
+
+                    </GridItemsLayout>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:DMS">
+                        <Grid Padding="5">
+                            <Frame HeightRequest="100" Padding="0" HorizontalOptions="Start" Style="{StaticResource CardView}">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="openfile"/>
+                                </Frame.GestureRecognizers>
+                                <Grid Padding="0"
+                                      ColumnDefinitions="Auto,*">
+                                    
+
+                                    <VerticalStackLayout VerticalOptions="Center" Grid.Column="0">
+                                        <Label Padding="5" VerticalOptions="Center" Style="{StaticResource SmallLabel}">
+                                            <Label.Text>
+                                                <MultiBinding StringFormat="{}Phiên bản(Rev): {0}">
+                                                    <Binding Path="rev" />
+                                                </MultiBinding>
+                                            </Label.Text>
+                                        </Label>
+                                    </VerticalStackLayout>
+
+                                    <VerticalStackLayout Grid.Column="1" Padding="10" VerticalOptions="Center">
+                                        <Label VerticalOptions="Center" Style="{StaticResource SmallLabel}">
+                                            <Label.Text>
+                                                <MultiBinding StringFormat="{}Ngày đăng: {0}">
+                                                    <Binding Path="uploaddate" />
+                                                </MultiBinding>
+                                            </Label.Text>
+                                        </Label>
+                                        <Label VerticalOptions="Center" Style="{StaticResource SmallLabel}">
+                                            <Label.Text>
+                                                <MultiBinding StringFormat="{}Tác giả: {0}">
+                                                    <Binding Path="author" />
+                                                </MultiBinding>
+                                            </Label.Text>
+                                        </Label>
+
+                                    </VerticalStackLayout>
+
+                                </Grid>
+
+                            </Frame>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Button Text="Nhấp vào phiên bản để mở tập tin" Grid.Row="2" Grid.ColumnSpan="2" Margin="8" Style="{StaticResource ButtonOutline}">
+            </Button>
+            <ActivityIndicator x:Name="ActivityIndicatorin"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="CenterAndExpand"
+                           Grid.RowSpan="2"
+                           Grid.ColumnSpan="2"
+                           >
+            </ActivityIndicator>
+
+
+        </Grid>
+    </Grid>
+    
+    
+</ContentPage>

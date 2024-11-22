@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:MyCompany.Model"
+             x:Class="MyCompany.Menu"
+             Title="MY AHT">
+
+    <ScrollView Orientation="Vertical" >
+    <Grid  ColumnDefinitions="*"
+          ColumnSpacing="5"
+          RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,*"          
+          RowSpacing="0" >
+        
+            
+        
+        <Grid Grid.Row="0">
+            <Label Text="Công cụ" Padding="10" HorizontalTextAlignment="Center" Style="{StaticResource welcome_bigsize}"/>
+        </Grid>
+
+        <!-- Section for Company Tools -->
+        <Grid Grid.Row="1" VerticalOptions="Start">
+            <CollectionView HeightRequest="200">
+                <CollectionView.ItemsSource>
+                    <x:Array Type="{x:Type model:button_link}">
+                        <model:button_link
+                            image_path="link_icon.png"
+                            button_text="Các link thường xuyên sử dụng"
+                            page_route="Shortcut"/>
+                        <model:button_link
+                            image_path="lichbay_icon.png"
+                            button_text="Tra cứu lịch bay"
+                            page_route="Flights"/>
+                        <model:button_link
+                            image_path="dms_icon.png"
+                            button_text="Tra cứu văn bản"
+                            page_route="DMS_Search"/>
+                        <model:button_link
+                            image_path="shift_icon.png"
+                            button_text="Tra cứu ca"
+                            page_route="Shift_Search"/>
+                    </x:Array>
+                </CollectionView.ItemsSource>
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Horizontal" 
+                                         Span="{OnIdiom Desktop=1,Default=1}">
+
+                    </GridItemsLayout>
+
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:button_link">
+                        <Grid Padding="5">
+                            <Frame HeightRequest="200" WidthRequest="200" Padding="1" Style="{StaticResource CardView}" HorizontalOptions="CenterAndExpand" HasShadow="False">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="routeAsync"/>
+                                    </Frame.GestureRecognizers>
+                                    <VerticalStackLayout HorizontalOptions="Center">
+                                    <Image Aspect="AspectFit" Source="{Binding image_path}" HeightRequest="150" WidthRequest="150" HorizontalOptions="Center" />
+                                    <Label LineBreakMode="WordWrap" Style="{StaticResource welcome}" HeightRequest="150" WidthRequest="150" Text="{Binding button_text}"/>
+                                </VerticalStackLayout>
+
+                            </Frame>
+                        </Grid>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+
+         <!-- Section for Company NEWS -->
+        <Grid Grid.Row="2">
+            <Label x:Name="e_news_newscollection_label" Text="Tin tức" Padding="10" HorizontalTextAlignment="Center" Style="{StaticResource welcome_bigsize}"/>
+        </Grid>
+        <Grid Grid.Row="3" VerticalOptions="Start">
+            <CollectionView x:Name="e_news_newscollection" HeightRequest="300">                
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Horizontal" 
+                                         Span="{OnIdiom Desktop=1,Default=1}">
+                    </GridItemsLayout>
+
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:E_News">
+                        <Grid Padding="5">
+                            <Frame HeightRequest="300" WidthRequest="300" Padding="1" Style="{StaticResource CardView}" HorizontalOptions="CenterAndExpand" HasShadow="False">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="E_NEWS_Async"/>
+                                </Frame.GestureRecognizers>
+                                <VerticalStackLayout HorizontalOptions="Center">
+                                        <Image Aspect="AspectFit" Source="{Binding E_News_imagepath}" HeightRequest="200" WidthRequest="200" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                        <Label LineBreakMode="WordWrap" Style="{StaticResource welcome}" HeightRequest="250" WidthRequest="250" Text="{Binding E_News_title}"/>
+                                </VerticalStackLayout>
+
+                            </Frame>
+                        </Grid>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+
+
+        <!-- Section for Company Survey -->
+        <Grid Grid.Row="4">
+                <Label x:Name="e_news_survey_label" Text="Khảo sát" Padding="10" HorizontalTextAlignment="Center" Style="{StaticResource welcome_bigsize}"/>
+        </Grid>
+        <Grid Grid.Row="5" VerticalOptions="Start">
+            <CollectionView x:Name="e_news_survey" HeightRequest="200">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Horizontal" 
+                                         Span="{OnIdiom Desktop=1,Default=1}">
+                    </GridItemsLayout>
+
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:E_News">
+                        <Grid Padding="5">
+                            <Frame HeightRequest="200" WidthRequest="200" Padding="1" Style="{StaticResource CardView}" HorizontalOptions="CenterAndExpand" HasShadow="False">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="E_NEWS_Async"/>
+                                </Frame.GestureRecognizers>
+                                <VerticalStackLayout HorizontalOptions="Center">
+                                        <Image Aspect="AspectFit" Source="{Binding E_News_imagepath}" HeightRequest="150" WidthRequest="150" HorizontalOptions="Center"/>
+                                        <Label LineBreakMode="WordWrap" Style="{StaticResource welcome}" HeightRequest="150" WidthRequest="150" Text="{Binding E_News_title}"/>
+                                </VerticalStackLayout>
+
+                            </Frame>
+                        </Grid>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+
+        <!-- Section for Company Other -->
+        <Grid Grid.Row="6">
+                <Label x:Name="e_news_other_label" Text="Khác" Padding="10" HorizontalTextAlignment="Center" Style="{StaticResource welcome_bigsize}"/>
+        </Grid>
+        <Grid Grid.Row="7" VerticalOptions="Start">
+                <CollectionView x:Name="e_news_other" HeightRequest="200">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Horizontal" 
+                                         Span="{OnIdiom Desktop=1,Default=1}">
+                    </GridItemsLayout>
+
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:E_News">
+                        <Grid Padding="5">
+                            <Frame HeightRequest="200" WidthRequest="200" Padding="1" Style="{StaticResource CardView}" HorizontalOptions="CenterAndExpand" HasShadow="False">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="E_NEWS_Async"/>
+                                </Frame.GestureRecognizers>
+                                <VerticalStackLayout HorizontalOptions="Center">
+                                        <Image Aspect="AspectFit" Source="{Binding E_News_imagepath}" HeightRequest="150" WidthRequest="150" HorizontalOptions="Center"/>
+                                        <Label LineBreakMode="WordWrap" Style="{StaticResource welcome}" HeightRequest="150" WidthRequest="150" Text="{Binding E_News_title}"/>
+                                </VerticalStackLayout>
+
+                            </Frame>
+                        </Grid>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+        
+    </Grid>
+    </ScrollView>
+</ContentPage>
+	
