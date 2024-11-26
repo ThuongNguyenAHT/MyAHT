@@ -1,6 +1,9 @@
-﻿obj\Release\net8.0-android34.0\resizetizer\r\drawable\arr_icon.png
+﻿obj\Release\net8.0-android34.0\resizetizer\r\drawable\about_us.png
+obj\Release\net8.0-android34.0\resizetizer\r\drawable\arr_icon.png
 obj\Release\net8.0-android34.0\resizetizer\r\drawable\baggageclaim_icon.png
 obj\Release\net8.0-android34.0\resizetizer\r\drawable\checkin_icon.png
+obj\Release\net8.0-android34.0\resizetizer\r\drawable\contact_us.png
+obj\Release\net8.0-android34.0\resizetizer\r\drawable\dashboard.png
 obj\Release\net8.0-android34.0\resizetizer\r\drawable\dep_icon.png
 obj\Release\net8.0-android34.0\resizetizer\r\drawable\dms_icon.png
 obj\Release\net8.0-android34.0\resizetizer\r\drawable\flightstatusicon.png
@@ -8,9 +11,12 @@ obj\Release\net8.0-android34.0\resizetizer\r\drawable\gateicon.png
 obj\Release\net8.0-android34.0\resizetizer\r\drawable\lichbay_icon.png
 obj\Release\net8.0-android34.0\resizetizer\r\drawable\link_icon.png
 obj\Release\net8.0-android34.0\resizetizer\r\drawable\locationicon.png
+obj\Release\net8.0-android34.0\resizetizer\r\drawable\lock.png
 obj\Release\net8.0-android34.0\resizetizer\r\drawable\logo.png
 obj\Release\net8.0-android34.0\resizetizer\r\drawable\shift_icon.png
 obj\Release\net8.0-android34.0\resizetizer\r\drawable\stand_icon.png
+obj\Release\net8.0-android34.0\resizetizer\r\drawable\team.png
+obj\Release\net8.0-android34.0\resizetizer\r\drawable\user.png
 obj\Release\net8.0-android34.0\resizetizer\r\drawable-hdpi\dotnet_bot.png
 obj\Release\net8.0-android34.0\resizetizer\r\drawable-hdpi\mycompany.png
 obj\Release\net8.0-android34.0\resizetizer\r\drawable-mdpi\dotnet_bot.png

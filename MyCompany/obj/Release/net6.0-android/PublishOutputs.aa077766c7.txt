@@ -1,2 +1,0 @@
-D:\Dropbox\Programming\MyCompany\MyCompany\MyCompany\bin\Release\net6.0-android\publish\com.aht.mycompany-Signed.apk
-D:\Dropbox\Programming\MyCompany\MyCompany\MyCompany\bin\Release\net6.0-android\publish\com.aht.mycompany.apk

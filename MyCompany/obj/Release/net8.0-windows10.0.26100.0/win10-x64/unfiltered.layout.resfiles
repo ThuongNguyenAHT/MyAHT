@@ -9,6 +9,7 @@ Roboto-Bold.ttf
 Roboto-Italic.ttf
 Roboto-Medium.ttf
 Sitka.ttc
+about_us.scale-100.png
 appicon.ico
 appiconLargeTile.scale-100.png
 appiconLargeTile.scale-125.png
@@ -57,7 +58,9 @@ appiconWideTile.scale-200.png
 appiconWideTile.scale-400.png
 arr_icon.scale-100.png
 baggageclaim_icon.scale-100.png
+contact_us.scale-100.png
 checkin_icon.scale-100.png
+dashboard.scale-100.png
 dep_icon.scale-100.png
 dms_icon.scale-100.png
 dotnet_bot.scale-100.png
@@ -70,6 +73,7 @@ gateicon.scale-100.png
 lichbay_icon.scale-100.png
 link_icon.scale-100.png
 locationicon.scale-100.png
+lock.scale-100.png
 logo.scale-100.png
 mycompany.scale-100.png
 mycompany.scale-125.png
@@ -78,6 +82,8 @@ mycompany.scale-200.png
 mycompany.scale-400.png
 shift_icon.scale-100.png
 stand_icon.scale-100.png
+team.scale-100.png
+user.scale-100.png
 splashSplashScreen.scale-100.png
 splashSplashScreen.scale-125.png
 splashSplashScreen.scale-150.png

@@ -1,4 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <ItemGroup />
+  <ItemGroup>
+    <BundleResource Include="F:\AHT_COMPANY\MyAHT\MyCompany\MyCompany\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\locationicon.png" />
+    <BundleResource Include="F:\AHT_COMPANY\MyAHT\MyCompany\MyCompany\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\baggageclaim_icon.png" />
+    <BundleResource Include="F:\AHT_COMPANY\MyAHT\MyCompany\MyCompany\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\flightstatusicon.png" />
+    <BundleResource Include="F:\AHT_COMPANY\MyAHT\MyCompany\MyCompany\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\arr_icon.png" />
+    <BundleResource Include="F:\AHT_COMPANY\MyAHT\MyCompany\MyCompany\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\lichbay_icon.png" />
+    <BundleResource Include="F:\AHT_COMPANY\MyAHT\MyCompany\MyCompany\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\dep_icon.png" />
+    <BundleResource Include="F:\AHT_COMPANY\MyAHT\MyCompany\MyCompany\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\link_icon.png" />
+    <BundleResource Include="F:\AHT_COMPANY\MyAHT\MyCompany\MyCompany\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\dms_icon.png" />
+    <BundleResource Include="F:\AHT_COMPANY\MyAHT\MyCompany\MyCompany\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\stand_icon.png" />
+    <BundleResource Include="F:\AHT_COMPANY\MyAHT\MyCompany\MyCompany\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\logo.png" />
+    <BundleResource Include="F:\AHT_COMPANY\MyAHT\MyCompany\MyCompany\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\shift_icon.png" />
+    <BundleResource Include="F:\AHT_COMPANY\MyAHT\MyCompany\MyCompany\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\checkin_icon.png" />
+    <BundleResource Include="F:\AHT_COMPANY\MyAHT\MyCompany\MyCompany\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\lock.png" />
+    <BundleResource Include="F:\AHT_COMPANY\MyAHT\MyCompany\MyCompany\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\gateicon.png" />
+    <BundleResource Include="F:\AHT_COMPANY\MyAHT\MyCompany\MyCompany\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\about_us.png" />
+    <BundleResource Include="F:\AHT_COMPANY\MyAHT\MyCompany\MyCompany\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\user.png" />
+    <BundleResource Include="F:\AHT_COMPANY\MyAHT\MyCompany\MyCompany\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\dashboard.png" />
+    <BundleResource Include="F:\AHT_COMPANY\MyAHT\MyCompany\MyCompany\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\contact_us.png" />
+    <BundleResource Include="F:\AHT_COMPANY\MyAHT\MyCompany\MyCompany\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\team.png" />
+    <BundleResource Include="F:\AHT_COMPANY\MyAHT\MyCompany\MyCompany\obj\Release\net8.0-maccatalyst\resizetizer\r\mycompany@3x.png" />
+    <BundleResource Include="F:\AHT_COMPANY\MyAHT\MyCompany\MyCompany\obj\Release\net8.0-maccatalyst\resizetizer\r\mycompany@2x.png" />
+    <BundleResource Include="F:\AHT_COMPANY\MyAHT\MyCompany\MyCompany\obj\Release\net8.0-maccatalyst\resizetizer\r\mycompany.png" />
+    <BundleResource Include="F:\AHT_COMPANY\MyAHT\MyCompany\MyCompany\obj\Release\net8.0-maccatalyst\resizetizer\r\dotnet_bot@3x.png" />
+    <BundleResource Include="F:\AHT_COMPANY\MyAHT\MyCompany\MyCompany\obj\Release\net8.0-maccatalyst\resizetizer\r\dotnet_bot@2x.png" />
+    <BundleResource Include="F:\AHT_COMPANY\MyAHT\MyCompany\MyCompany\obj\Release\net8.0-maccatalyst\resizetizer\r\dotnet_bot.png" />
+  </ItemGroup>
 </Project>

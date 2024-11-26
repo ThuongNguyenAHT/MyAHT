@@ -2,62 +2,80 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyCompany.MainPage"
-             Title="Truy Cập">
+             Shell.NavBarIsVisible="False"
+             >
     <ScrollView>
         <Grid RowDefinitions="*,Auto,Auto"
           RowSpacing="0">
                 
         
-        <StackLayout Margin="20">
-                <Image Source="logo.png"  Aspect="AspectFit" HeightRequest="100"  WidthRequest="300" HorizontalOptions="CenterAndExpand"/>
+        <VerticalStackLayout 
+            Spacing="10"
+            Padding="30,0"
+            VerticalOptions="Center">
+                <Image Source="logo.png"  Aspect="AspectFit" HeightRequest="200"  WidthRequest="200" HorizontalOptions="CenterAndExpand"/>
 
-            <StackLayout Margin="0,0">
-                <Label Style="{StaticResource welcome}" FontSize="32" Text="Welcome Back"/>
-                <Label x:Name="statusout" Style="{StaticResource welcome}" FontSize="16" Text="Sign in to continue"/>
-            </StackLayout>
+                <VerticalStackLayout Spacing="5">
+                    <Label Style="{StaticResource welcome}" FontSize="32" Text="Welcome Back" HorizontalTextAlignment="Center"/>
+                    <Label x:Name="statusout" Style="{StaticResource welcome}" FontSize="16" Text="Login to your account" HorizontalTextAlignment="Center"/>
+                </VerticalStackLayout>
+               
+                <StackLayout Orientation="Horizontal">
+                        <Frame ZIndex="1" HasShadow="True" HeightRequest="56" WidthRequest="56" CornerRadius="28" BorderColor="White">
+                            <Image Source="user.png" HeightRequest="20" WidthRequest="20"/>
+                        </Frame>
 
-            <StackLayout>
-                <Label FontFamily="OpenSansRegular" TextColor="{StaticResource TextPrimaryColor}" 
-                       FontSize="16" Text="Username"/>
-                <Grid Margin="0,5">
-                    <Frame Opacity="0.3" BackgroundColor="White" CornerRadius="5"/>
-                    <Entry x:Name="usernamein" BackgroundColor="Transparent" Placeholder="Enter username" 
-                           TextColor="Black" Margin="5,0"
-                           PlaceholderColor="Gray" />
+                        <Frame HasShadow="True" HeightRequest="45" BorderColor="White" CornerRadius="5" HorizontalOptions="FillAndExpand" Padding="0" Margin="-20,0,0,0">
+                            <Entry x:Name="usernamein" Placeholder="Enter your email (*)" Keyboard="Email"
+                                    VerticalOptions="Center" Margin="20,0,0,0"/>           
+                        </Frame>
 
-                </Grid>
+                </StackLayout>
 
-                <Label FontFamily="OpenSansRegular" TextColor="{StaticResource TextPrimaryColor}" 
-                       FontSize="16" Text="Password"/>
-                <Grid Margin="0,5">
-                    <Frame Opacity="0.3" BackgroundColor="White" CornerRadius="5"/>
-                    <Entry x:Name="passwordin" BackgroundColor="Transparent" Placeholder="Enter password" 
-                           TextColor="Black" Margin="5,0"
-                           PlaceholderColor="Gray" IsPassword="True"/>
+                <StackLayout Orientation="Horizontal">
+                    <Frame ZIndex="1" HasShadow="True" HeightRequest="56" WidthRequest="56" CornerRadius="28" BorderColor="White">
+                        <Image Source="lock.png" HeightRequest="20" WidthRequest="20"/>
+                    </Frame>
 
-                </Grid>
-                <HorizontalStackLayout VerticalOptions="Center">
+                    <Frame HasShadow="True" HeightRequest="45" BorderColor="White" CornerRadius="5" HorizontalOptions="FillAndExpand" Padding="0" Margin="-20,0,0,0">
+                        <Entry x:Name="passwordin" Placeholder="Enter your password (*)" IsPassword="True"
+                                    VerticalOptions="Center" Margin="20,0,0,0"/>
+                    </Frame>
+
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
                     <CheckBox x:Name="remember_but"></CheckBox>
                     <Label FontFamily="OpenSansRegular" TextColor="{StaticResource TextPrimaryColor}" 
                        FontSize="16" Text="Remember me" VerticalOptions="Center"/>
-                </HorizontalStackLayout>
-                
-            </StackLayout>
+                </StackLayout>
 
-            <Button Margin="0,15" 
-                    Text="Sign in"
-                    Style="{StaticResource ButtonOutline}"
-                    Clicked="SigninAsync"/>
-        </StackLayout>
+                <Button Margin="0,15" WidthRequest="100" CornerRadius="20" 
+                        HorizontalOptions="Center" BackgroundColor="{StaticResource TextPrimaryColor}"
+                        Text="Sign in"
+                        Style="{StaticResource ButtonOutline}"
+                        Clicked="SigninAsync"/>
+
+                <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="Center">
+                    <Label Text="Don't have account? " TextColor="Gray"/>
+                    <Label Text="Sign up here" TextColor="{StaticResource TextPrimaryColor}">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnSignUpTapped" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+            
+            </VerticalStackLayout>
+            
             <Label Text="Beta Version" HorizontalOptions="Center" VerticalOptions="End" Style="{StaticResource welcome}"/>
-        <ActivityIndicator x:Name="ActivityIndicatorin"
-                           HorizontalOptions="FillAndExpand"
-                           VerticalOptions="CenterAndExpand"
-                           Grid.RowSpan="2"
-                           Grid.ColumnSpan="2"
-                           >
-        </ActivityIndicator>
-        
+            <ActivityIndicator x:Name="ActivityIndicatorin"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalOptions="CenterAndExpand"
+                               Grid.RowSpan="2"
+                               Grid.ColumnSpan="2"
+                               >
+            </ActivityIndicator>
+
         </Grid>
         
     </ScrollView>

@@ -3,9 +3,9 @@
   <PropertyGroup>
     <ActiveDebugFramework>net8.0-android34.0</ActiveDebugFramework>
     <IsFirstTimeProjectOpen>False</IsFirstTimeProjectOpen>
-    <ActiveDebugProfile>Pixel 7 - API 31 (Android 12.0 - API 31)</ActiveDebugProfile>
+    <ActiveDebugProfile>Pixel 7 - API 34 (Android 14.0 - API 34)</ActiveDebugProfile>
     <SelectedPlatformGroup>Emulator</SelectedPlatformGroup>
-    <DefaultDevice>pixel_7_-_api_31</DefaultDevice>
+    <DefaultDevice>pixel_7_-_api_34</DefaultDevice>
     <SelectedDevice>Local Device</SelectedDevice>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0-android|AnyCPU'">
@@ -32,6 +32,9 @@
   </PropertyGroup>
   <ItemGroup>
     <MauiXaml Update="Account\Login.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Account\SignUp.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Views\DMS_Detail.xaml">

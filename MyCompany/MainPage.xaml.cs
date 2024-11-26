@@ -1,4 +1,5 @@
-﻿using MyCompany.Services;
+﻿using MyCompany.Account;
+using MyCompany.Services;
 
 namespace MyCompany;
 
@@ -48,6 +49,11 @@ public partial class MainPage : ContentPage
 
     }
 
+    // Phương thức xử lý sự kiện đăng ký
+    private void OnSignUpTapped(object sender, EventArgs e) 
+    { // Chuyển hướng đến trang đăng ký
+      Navigation.PushAsync(new SignUp()); 
+    }
 
     async void SigninAsync(object sender, EventArgs e)
     {

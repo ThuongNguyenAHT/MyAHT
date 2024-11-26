@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyCompany.Account.SignUp"
+             Shell.NavBarIsVisible="False"
+             >
+    <ScrollView>
+        <Grid RowDefinitions="*,Auto,Auto"
+          RowSpacing="0">
+
+
+            <VerticalStackLayout 
+            Spacing="10"
+            Padding="30,0"
+            VerticalOptions="Center">
+                <Image Source="logo.png"  Aspect="AspectFit" HeightRequest="200"  WidthRequest="200" HorizontalOptions="CenterAndExpand"/>
+
+                <VerticalStackLayout Spacing="5">
+                    <Label Style="{StaticResource welcome}" FontSize="32" Text="Welcome Back" HorizontalTextAlignment="Center"/>
+                    <Label x:Name="statusout" Style="{StaticResource welcome}" FontSize="16" Text="Create your account" HorizontalTextAlignment="Center"/>
+                </VerticalStackLayout>
+                
+
+                <StackLayout Orientation="Horizontal">
+                    <Frame ZIndex="1" HasShadow="True" HeightRequest="56" WidthRequest="56" CornerRadius="28" BorderColor="White">
+                        <Image Source="user.png" HeightRequest="20" WidthRequest="20"/>
+                    </Frame>
+
+                    <Frame HasShadow="True" HeightRequest="45" BorderColor="White" CornerRadius="5" HorizontalOptions="FillAndExpand" Padding="0" Margin="-20,0,0,0">
+                        <Entry x:Name="usernamein" Placeholder="Enter your email (*)" Keyboard="Email"
+                                    VerticalOptions="Center" Margin="20,0,0,0"/>
+                    </Frame>
+
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Frame ZIndex="1" HasShadow="True" HeightRequest="56" WidthRequest="56" CornerRadius="28" BorderColor="White">
+                        <Image Source="lock.png" HeightRequest="20" WidthRequest="20"/>
+                    </Frame>
+
+                    <Frame HasShadow="True" HeightRequest="45" BorderColor="White" CornerRadius="5" HorizontalOptions="FillAndExpand" Padding="0" Margin="-20,0,0,0">
+                        <Entry x:Name="passwordSignUp" Placeholder="Enter your password (*)" IsPassword="True"
+                                    VerticalOptions="Center" Margin="20,0,0,0"/>
+                    </Frame>
+
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Frame ZIndex="1" HasShadow="True" HeightRequest="56" WidthRequest="56" CornerRadius="28" BorderColor="White">
+                        <Image Source="lock.png" HeightRequest="20" WidthRequest="20"/>
+                    </Frame>
+
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <CheckBox x:Name="remember_but"></CheckBox>
+                    <Label FontFamily="OpenSansRegular" TextColor="{StaticResource TextPrimaryColor}" 
+                       FontSize="16" Text="Remember me" VerticalOptions="Center"/>
+                </StackLayout>
+
+                <Button Margin="0,15" WidthRequest="100" CornerRadius="20" 
+                        HorizontalOptions="Center" BackgroundColor="{StaticResource TextPrimaryColor}"
+                        Text="Sign in"
+                        Style="{StaticResource ButtonOutline}"
+                        Clicked="SigninAsync"/>
+
+
+            </VerticalStackLayout>
+
+            <Label Text="Beta Version" HorizontalOptions="Center" VerticalOptions="End" Style="{StaticResource welcome}"/>
+            <ActivityIndicator x:Name="ActivityIndicatorin"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalOptions="CenterAndExpand"
+                               Grid.RowSpan="2"
+                               Grid.ColumnSpan="2"
+                               >
+            </ActivityIndicator>
+
+        </Grid>
+
+    </ScrollView>
+</ContentPage>

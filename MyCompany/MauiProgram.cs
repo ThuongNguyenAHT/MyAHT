@@ -1,4 +1,5 @@
-﻿using MyCompany.Services;
+﻿using MyCompany.Account;
+using MyCompany.Services;
 using MyCompany.Views;
 
 namespace MyCompany;
@@ -24,6 +25,7 @@ public static class MauiProgram
                 fonts.AddFont("Roboto-Black.ttf.ttf", "RobotoBlackBold");
             });
         builder.Services.AddTransient<Login>();
+        builder.Services.AddTransient<SignUp>();
         builder.Services.AddTransient<Menu>();
         builder.Services.AddTransient<Flights>();
         builder.Services.AddTransient<DMS_Search>();

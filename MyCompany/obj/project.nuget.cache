@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "hC75jDIq8gE=",
+  "dgSpecHash": "4a2Cxndlq2U=",
   "success": true,
   "projectFilePath": "F:\\AHT_COMPANY\\MyAHT\\MyCompany\\MyCompany\\MyCompany.csproj",
   "expectedPackageFiles": [
@@ -111,7 +111,6 @@
     "C:\\Users\\LENOVO\\.nuget\\packages\\xamarin.kotlin.stdlib.jdk8\\1.9.0.1\\xamarin.kotlin.stdlib.jdk8.1.9.0.1.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\xamarin.kotlinx.coroutines.android\\1.7.2.1\\xamarin.kotlinx.coroutines.android.1.7.2.1.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\xamarin.kotlinx.coroutines.core.jvm\\1.7.2.1\\xamarin.kotlinx.coroutines.core.jvm.1.7.2.1.nupkg.sha512",
-    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.maccatalyst.runtime.maccatalyst-arm64.net8.0_18.0\\18.0.8314\\microsoft.maccatalyst.runtime.maccatalyst-arm64.net8.0_18.0.18.0.8314.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.maccatalyst.runtime.maccatalyst-x64.net8.0_18.0\\18.0.8314\\microsoft.maccatalyst.runtime.maccatalyst-x64.net8.0_18.0.18.0.8314.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.maccatalyst.ref.net8.0_18.0\\18.0.8314\\microsoft.maccatalyst.ref.net8.0_18.0.18.0.8314.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.ios.runtime.ios-arm64.net8.0_18.0\\18.0.8314\\microsoft.ios.runtime.ios-arm64.net8.0_18.0.18.0.8314.nupkg.sha512",
@@ -121,11 +120,7 @@
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.android.ref.34\\34.0.145\\microsoft.android.ref.34.34.0.145.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.android.runtime.34.android-arm\\34.0.145\\microsoft.android.runtime.34.android-arm.34.0.145.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.android.runtime.34.android-x86\\34.0.145\\microsoft.android.runtime.34.android-x86.34.0.145.nupkg.sha512",
-    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.netcore.app.crossgen2.win-x64\\8.0.11\\microsoft.netcore.app.crossgen2.win-x64.8.0.11.nupkg.sha512",
-    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.26100.54\\microsoft.windows.sdk.net.ref.10.0.26100.54.nupkg.sha512",
-    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.11\\microsoft.aspnetcore.app.runtime.win-x64.8.0.11.nupkg.sha512",
-    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.11\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.11.nupkg.sha512",
-    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.11\\microsoft.netcore.app.runtime.win-x64.8.0.11.nupkg.sha512"
+    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.26100.54\\microsoft.windows.sdk.net.ref.10.0.26100.54.nupkg.sha512"
   ],
   "logs": []
 }

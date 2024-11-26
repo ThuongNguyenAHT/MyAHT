@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Shell.NavBarIsVisible="False"
              x:Class="MyCompany.Login"
              Title="MY AHT">
 			 
@@ -10,8 +11,8 @@
             <Image Source="logo.png" HeightRequest="50"  HorizontalOptions="StartAndExpand"/>
 
             <StackLayout Margin="0,80">
-                <Label Style="{StaticResource welcome}" FontSize="32" Text="Login Page"/>
-                <Label Style="{StaticResource welcome}" FontSize="16" Text="Sign in to continue"/>
+                <Label Style="{StaticResource welcome}" FontSize="32" Text="Đăng nhập"/>
+                <Label Style="{StaticResource welcome}" FontSize="16" Text="Đăng nhập để tiếp tục"/>
             </StackLayout>
 
             <StackLayout>
@@ -19,7 +20,7 @@
                        FontSize="16" Text="Username"/>
                 <Grid Margin="0,5">
                     <Frame Opacity="0.3" BackgroundColor="White" CornerRadius="5"/>
-                    <Entry x:Name="usernamein" BackgroundColor="Transparent" Placeholder="Enter username" 
+                    <Entry x:Name="usernamein" BackgroundColor="Transparent" Placeholder="Nhập username" 
                            TextColor="Black" Margin="5,0"
                            PlaceholderColor="Gray" />
 
@@ -29,7 +30,7 @@
                        FontSize="16" Text="Password"/>
                 <Grid Margin="0,5">
                     <Frame Opacity="0.3" BackgroundColor="White" CornerRadius="5"/>
-                    <Entry x:Name="passwordin" BackgroundColor="Transparent" Placeholder="Enter password" 
+                    <Entry x:Name="passwordin" BackgroundColor="Transparent" Placeholder="Nhập password" 
                            TextColor="Black" Margin="5,0"
                            PlaceholderColor="Gray" IsPassword="True"/>
 

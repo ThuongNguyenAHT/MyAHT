@@ -1,4 +1,6 @@
-﻿namespace MyCompany;
+﻿using MyCompany.Account;
+
+namespace MyCompany;
 
 public partial class Login : ContentPage
 {
@@ -9,14 +11,19 @@ public partial class Login : ContentPage
 
         InitializeComponent();
     }
-
+    private void OnSignUpTapped(object sender, EventArgs e)
+    { // Chuyển hướng đến trang đăng ký
+        Navigation.PushAsync(new SignUp());
+    }
 
     private void SigninAsync(object sender, EventArgs e)
     {
         username = usernamein.Text;
         password = passwordin.Text;
 
-
     }
+
+    
+
 }
 
