@@ -1,4 +1,5 @@
-﻿namespace MyCompany;
+﻿
+namespace MyCompany;
 
 public partial class App : Application
 {

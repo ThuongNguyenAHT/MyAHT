@@ -102,5 +102,25 @@ public partial class MainPage : ContentPage
 
 
     }
+
+    private void OnEntryUnfocused(object sender, FocusEventArgs e)
+    { // Ẩn bàn phím
+        if (sender is Entry entry) 
+        { 
+            entry.Unfocus(); 
+        } 
+    }
+
+    //Envent completed for press enter key
+    private void OnEntryCompleted(object sender, EventArgs e) 
+    {
+        if (sender is Entry entry)
+        { 
+            
+            entry.Unfocus(); 
+            
+            SigninAsync(sender, e); }
+        }
+
 }
 

@@ -11,7 +11,7 @@
         
         <VerticalStackLayout 
             Spacing="10"
-            Padding="30,0"
+            Padding="20,0"
             VerticalOptions="Center">
                 <Image Source="logo.png"  Aspect="AspectFit" HeightRequest="200"  WidthRequest="200" HorizontalOptions="CenterAndExpand"/>
 
@@ -26,8 +26,11 @@
                         </Frame>
 
                         <Frame HasShadow="True" HeightRequest="45" BorderColor="White" CornerRadius="5" HorizontalOptions="FillAndExpand" Padding="0" Margin="-20,0,0,0">
-                            <Entry x:Name="usernamein" Placeholder="Enter your email (*)" Keyboard="Email"
-                                    VerticalOptions="Center" Margin="20,0,0,0"/>           
+                            <Entry x:Name="usernamein" Placeholder="Enter your email" 
+                                   Keyboard="Email" Margin="20,0,0,0"
+                                   VerticalOptions="Center"
+                                   Unfocused="OnEntryUnfocused"
+                                   />           
                         </Frame>
 
                 </StackLayout>
@@ -38,8 +41,13 @@
                     </Frame>
 
                     <Frame HasShadow="True" HeightRequest="45" BorderColor="White" CornerRadius="5" HorizontalOptions="FillAndExpand" Padding="0" Margin="-20,0,0,0">
-                        <Entry x:Name="passwordin" Placeholder="Enter your password (*)" IsPassword="True"
-                                    VerticalOptions="Center" Margin="20,0,0,0"/>
+                        <Entry x:Name="passwordin" 
+                               Placeholder="Enter your password (*)" 
+                               IsPassword="True"
+                               VerticalOptions="Center" 
+                               Margin="20,0,0,0"
+                               Unfocused="OnEntryUnfocused"
+                               Completed="OnEntryCompleted"/>
                     </Frame>
 
                 </StackLayout>

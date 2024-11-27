@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4a2Cxndlq2U=",
+  "dgSpecHash": "kRwQjopxXc4=",
   "success": true,
   "projectFilePath": "F:\\AHT_COMPANY\\MyAHT\\MyCompany\\MyCompany\\MyCompany.csproj",
   "expectedPackageFiles": [
@@ -113,8 +113,8 @@
     "C:\\Users\\LENOVO\\.nuget\\packages\\xamarin.kotlinx.coroutines.core.jvm\\1.7.2.1\\xamarin.kotlinx.coroutines.core.jvm.1.7.2.1.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.maccatalyst.runtime.maccatalyst-x64.net8.0_18.0\\18.0.8314\\microsoft.maccatalyst.runtime.maccatalyst-x64.net8.0_18.0.18.0.8314.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.maccatalyst.ref.net8.0_18.0\\18.0.8314\\microsoft.maccatalyst.ref.net8.0_18.0.18.0.8314.nupkg.sha512",
-    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.ios.runtime.ios-arm64.net8.0_18.0\\18.0.8314\\microsoft.ios.runtime.ios-arm64.net8.0_18.0.18.0.8314.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.ios.ref.net8.0_18.0\\18.0.8314\\microsoft.ios.ref.net8.0_18.0.18.0.8314.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.ios.runtime.iossimulator-x64.net8.0_18.0\\18.0.8314\\microsoft.ios.runtime.iossimulator-x64.net8.0_18.0.18.0.8314.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.android.runtime.34.android-x64\\34.0.145\\microsoft.android.runtime.34.android-x64.34.0.145.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.android.runtime.34.android-arm64\\34.0.145\\microsoft.android.runtime.34.android-arm64.34.0.145.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.android.ref.34\\34.0.145\\microsoft.android.ref.34.34.0.145.nupkg.sha512",
