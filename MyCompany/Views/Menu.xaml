@@ -5,8 +5,8 @@
              x:Class="MyCompany.Menu"
              Title="MY AHT">
 
-    <ScrollView Orientation="Vertical" >
-    <Grid  ColumnDefinitions="*"
+    <ScrollView>
+        <Grid  ColumnDefinitions="*"
           ColumnSpacing="5"
           RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,*"          
           RowSpacing="0" >
@@ -18,8 +18,8 @@
         </Grid>
 
         <!-- Section for Company Tools -->
-        <Grid Grid.Row="1" VerticalOptions="Start">
-            <CollectionView HeightRequest="200">
+        <Grid Grid.Row="1" VerticalOptions="Start" Margin="0,0,0,30">
+            <CollectionView>
                 <CollectionView.ItemsSource>
                     <x:Array Type="{x:Type model:button_link}">
                         <model:button_link
@@ -40,14 +40,11 @@
                             page_route="Shift_Search"/>
                     </x:Array>
                 </CollectionView.ItemsSource>
-                <CollectionView.ItemsLayout>
-                    <GridItemsLayout Orientation="Horizontal" 
-                                         Span="{OnIdiom Desktop=1,Default=1}">
-
-                    </GridItemsLayout>
-
-                </CollectionView.ItemsLayout>
-                <CollectionView.ItemTemplate>
+                    <CollectionView.ItemsLayout>
+                        <!-- Bố cục Grid 2 hàng 2 cột -->
+                        <GridItemsLayout Orientation="Vertical" Span="2"/>
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="model:button_link">
                         <Grid Padding="5">
                             <Frame HeightRequest="200" WidthRequest="200" Padding="1" Style="{StaticResource CardView}" HorizontalOptions="CenterAndExpand" HasShadow="False">
