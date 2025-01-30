@@ -55,12 +55,42 @@ public partial class MainPage : ContentPage
       Navigation.PushAsync(new SignUp()); 
     }
 
+    //Status Login
     async void SigninAsync(object sender, EventArgs e)
     {
         username = usernamein.Text;
         password = passwordin.Text;
-        if (IsBusy == true)
+
+        // Kiểm tra email và mật khẩu
+        if (!IsValidEmail(username))
+        {
+            usernamein.TextColor = Colors.Red;
+            emailErrorLabel.Text = "Email không hợp lệ. Vui lòng nhập lại";
+            emailErrorLabel.IsVisible = true;
             return;
+        }
+        else
+        {
+            usernamein.TextColor = Colors.Black;
+            emailErrorLabel.IsVisible = false;
+        }
+
+        if (string.IsNullOrEmpty(password) || password.Length < 8)
+        {
+            passwordin.TextColor = Colors.Red;
+            passwordErrorLabel.Text = "Mật khẩu phải có ít nhất 8 ký tự";
+            passwordErrorLabel.IsVisible = true;
+            return;
+        }
+        else
+        {
+            passwordin.TextColor = Colors.Black;
+            passwordErrorLabel.IsVisible = false;
+        }
+
+        if (IsBusy)
+            return;
+
         try
         {
             IsBusy = true;
@@ -69,28 +99,27 @@ public partial class MainPage : ContentPage
             var result = await LoginService.OwinLogin(username, password);
             if (result.ToLower() == "true")
             {
-                statusout.Text = "Login Success!";
+                statusout.Text = "Login thành công!";
                 statusout.TextColor = Colors.Blue;
                 await Shell.Current.GoToAsync(nameof(Menu), true);
             }
             else
             {
-                statusout.Text = "Failed To Login!";
+                statusout.Text = "Email hoặc mật khẩu không đúng";
                 statusout.TextColor = Colors.Red;
             }
-            if (remember_but.IsChecked == true)
+
+            if (remember_but.IsChecked)
             {
                 string name = "login.txt";
                 string file = System.IO.Path.Combine(FileSystem.CacheDirectory, name);
                 var content = alphabet.EncodeBase64(remember_but.IsChecked.ToString()) + Environment.NewLine + alphabet.EncodeBase64(username) + Environment.NewLine + alphabet.EncodeBase64(password);
                 System.IO.File.WriteAllText(file, content);
             }
-
         }
-        //catch (Exception ex)
-        catch 
+        catch
         {
-            statusout.Text = $"Vui lòng kiểm tra lại kết nối mạng!";
+            statusout.Text = "Vui lòng kiểm tra lại kết nối mạng!";
             statusout.TextColor = Colors.Red;
         }
         finally
@@ -99,8 +128,6 @@ public partial class MainPage : ContentPage
             ActivityIndicatorin.IsVisible = IsBusy;
             ActivityIndicatorin.IsRunning = IsBusy;
         }
-
-
     }
 
     private void OnEntryUnfocused(object sender, FocusEventArgs e)
@@ -119,8 +146,48 @@ public partial class MainPage : ContentPage
             
             entry.Unfocus(); 
             
-            SigninAsync(sender, e); }
+            SigninAsync(sender, e); 
         }
+    }
 
+    private void OnEmailTextChanged(object sender, TextChangedEventArgs e)
+    {
+        var email = e.NewTextValue;
+        if (!IsValidEmail(email))
+        {
+            usernamein.TextColor = Colors.Red;
+        }
+        else
+        {
+            usernamein.TextColor = Colors.Black;
+        }
+    }
+
+    private void OnPasswordTextChanged(object sender, TextChangedEventArgs e)
+    {
+        var password = e.NewTextValue;
+        if (string.IsNullOrEmpty(password) || password.Length < 8)
+        {
+            passwordin.TextColor = Colors.Red;
+        }
+        else
+        {
+            passwordin.TextColor = Colors.Black;
+        }
+    }
+
+    private bool IsValidEmail(string email)
+    {
+        try
+        {
+            var addr = new System.Net.Mail.MailAddress(email);
+            return addr.Address == email;
+        }
+        catch
+        {
+            return false;
+        }
+    }
+    
 }
 

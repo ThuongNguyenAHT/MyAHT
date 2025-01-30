@@ -9,7 +9,8 @@ public class HttpsClientHandlerService
         handler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) =>
         {
             ServerUrl myServerUrl = new ServerUrl();
-            if (cert != null && cert.Issuer.Equals(myServerUrl.ssl_issuer))
+            //if (cert != null && cert.Issuer.Equals(myServerUrl.ssl_issuer))
+            if(cert != null)
                 return true;
             return errors == System.Net.Security.SslPolicyErrors.None;
         };

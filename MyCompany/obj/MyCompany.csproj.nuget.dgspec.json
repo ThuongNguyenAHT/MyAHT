@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\AHT_COMPANY\\MyAHT\\MyCompany\\MyCompany\\MyCompany.csproj": {}
+    "F:\\AHT_COMPANY\\MyAHT\\MyAHT\\MyCompany\\MyCompany.csproj": {}
   },
   "projects": {
-    "F:\\AHT_COMPANY\\MyAHT\\MyCompany\\MyCompany\\MyCompany.csproj": {
+    "F:\\AHT_COMPANY\\MyAHT\\MyAHT\\MyCompany\\MyCompany.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\AHT_COMPANY\\MyAHT\\MyCompany\\MyCompany\\MyCompany.csproj",
+        "projectUniqueName": "F:\\AHT_COMPANY\\MyAHT\\MyAHT\\MyCompany\\MyCompany.csproj",
         "projectName": "MyCompany",
-        "projectPath": "F:\\AHT_COMPANY\\MyAHT\\MyCompany\\MyCompany\\MyCompany.csproj",
+        "projectPath": "F:\\AHT_COMPANY\\MyAHT\\MyAHT\\MyCompany\\MyCompany.csproj",
         "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "F:\\AHT_COMPANY\\MyAHT\\MyCompany\\MyCompany\\obj\\",
+        "outputPath": "F:\\AHT_COMPANY\\MyAHT\\MyAHT\\MyCompany\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [

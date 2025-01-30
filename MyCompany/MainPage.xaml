@@ -7,12 +7,7 @@
     <ScrollView>
         <Grid RowDefinitions="*,Auto,Auto"
           RowSpacing="0">
-                
-        
-        <VerticalStackLayout 
-            Spacing="10"
-            Padding="20,0"
-            VerticalOptions="Center">
+            <VerticalStackLayout Spacing="10" Padding="20,0" VerticalOptions="Center">
                 <Image Source="logo.png"  Aspect="AspectFit" HeightRequest="200"  WidthRequest="200" HorizontalOptions="CenterAndExpand"/>
 
                 <VerticalStackLayout Spacing="5">
@@ -20,7 +15,16 @@
                     <Label x:Name="statusout" Style="{StaticResource welcome}" FontSize="16" Text="Login to your account" HorizontalTextAlignment="Center"/>
                 </VerticalStackLayout>
                
-                <StackLayout Orientation="Horizontal">
+                <!--Email Entry & Error Message Label-->
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Orientation="Horizontal">
                         <Frame ZIndex="1" HasShadow="True" HeightRequest="56" WidthRequest="56" CornerRadius="28" BorderColor="White">
                             <Image Source="user.png" HeightRequest="20" WidthRequest="20"/>
                         </Frame>
@@ -30,28 +34,53 @@
                                    Keyboard="Email" Margin="20,0,0,0"
                                    VerticalOptions="Center"
                                    Unfocused="OnEntryUnfocused"
-                                   />           
+                                   TextChanged="OnEmailTextChanged"
+                               />
+                        </Frame>
+                    </StackLayout>
+                    <Label 
+                       Grid.Row="1"
+                       x:Name="emailErrorLabel"
+                       Text=""
+                       TextColor="Red"
+                       FontSize="14"
+                       HorizontalOptions="Center"
+                       IsVisible="False"/>
+                </Grid>
+                <!--Password Entry & Error Message Label-->
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Orientation="Horizontal">
+                        <Frame ZIndex="1" HasShadow="True" HeightRequest="56" WidthRequest="56" CornerRadius="28" BorderColor="White">
+                            <Image Source="lock.png" HeightRequest="20" WidthRequest="20"/>
                         </Frame>
 
-                </StackLayout>
-
-                <StackLayout Orientation="Horizontal">
-                    <Frame ZIndex="1" HasShadow="True" HeightRequest="56" WidthRequest="56" CornerRadius="28" BorderColor="White">
-                        <Image Source="lock.png" HeightRequest="20" WidthRequest="20"/>
-                    </Frame>
-
-                    <Frame HasShadow="True" HeightRequest="45" BorderColor="White" CornerRadius="5" HorizontalOptions="FillAndExpand" Padding="0" Margin="-20,0,0,0">
-                        <Entry x:Name="passwordin" 
+                        <Frame HasShadow="True" HeightRequest="45" BorderColor="White" CornerRadius="5" HorizontalOptions="FillAndExpand" Padding="0" Margin="-20,0,0,0">
+                            <Entry x:Name="passwordin" 
                                Placeholder="Enter your password (*)" 
                                IsPassword="True"
                                VerticalOptions="Center" 
                                Margin="20,0,0,0"
                                Unfocused="OnEntryUnfocused"
-                               Completed="OnEntryCompleted"/>
-                    </Frame>
+                               Completed="OnEntryCompleted"
+                               TextChanged="OnPasswordTextChanged"/>
+                        </Frame>
 
-                </StackLayout>
-
+                    </StackLayout>
+                    <Label Grid.Row="1"
+                       x:Name="passwordErrorLabel"
+                       Text=""
+                       TextColor="Red"
+                       FontSize="14"
+                       HorizontalOptions="Center"
+                       IsVisible="False"/>
+                </Grid>
                 <StackLayout Orientation="Horizontal">
                     <CheckBox x:Name="remember_but"></CheckBox>
                     <Label FontFamily="OpenSansRegular" TextColor="{StaticResource TextPrimaryColor}" 

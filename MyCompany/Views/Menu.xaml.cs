@@ -15,7 +15,6 @@ public partial class Menu : ContentPage
     public ObservableCollection<E_News> E_Other_list { get; } = new();
     public Menu()
     {
-
         InitializeComponent();
         update_e_newsAsync();
     }
@@ -176,6 +175,37 @@ public partial class Menu : ContentPage
 
 
     }
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        // Kiểm tra cờ trạng thái thông báo
+        bool isNotificationShown = Preferences.Get("IsNotificationShown", false);
+        if (!isNotificationShown)
+        {
+            ShowNotification();
+        }
+    }
+    //Hiển thị thông báo đăng nhập thành công
+    private async void ShowNotification()
+    {
+        NotificationLabel.Text = $"Chào bạn {MainPage.username} đến với MyAHT";
+        NotificationGrid.IsVisible = true;
+        NotificationGrid.Opacity = 0;
+        await NotificationGrid.TranslateTo(NotificationGrid.Width, 0, 0);
+        await Task.WhenAll(
+            NotificationGrid.TranslateTo(0, 0, 500, Easing.Linear),
+            NotificationGrid.FadeTo(1, 500, Easing.Linear)
+        );
+        await Task.Delay(3000); // Thời gian hiển thị thông báo
+        await Task.WhenAll(
+            NotificationGrid.TranslateTo(NotificationGrid.Width, 0, 500, Easing.Linear),
+            NotificationGrid.FadeTo(0, 500, Easing.Linear)
+        );
+        NotificationGrid.IsVisible = false;
 
+        // Đặt cờ trạng thái thông báo là true để không hiển thị lại
+        Preferences.Set("IsNotificationShown", true);
+    }
 }
+
 
