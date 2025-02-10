@@ -5,14 +5,8 @@
              Shell.NavBarIsVisible="False"
              >
     <ScrollView>
-        <Grid RowDefinitions="*,Auto,Auto"
-          RowSpacing="0">
-
-
-            <VerticalStackLayout 
-            Spacing="10"
-            Padding="30,0"
-            VerticalOptions="Center">
+        <Grid RowDefinitions="*,Auto,Auto" RowSpacing="0">
+            <VerticalStackLayout Spacing="10" Padding="30,0" VerticalOptions="Center">
                 <Image Source="logo.png"  Aspect="AspectFit" HeightRequest="200"  WidthRequest="200" HorizontalOptions="CenterAndExpand"/>
 
                 <VerticalStackLayout Spacing="5">
@@ -20,31 +14,72 @@
                     <Label x:Name="statusout" Style="{StaticResource welcome}" FontSize="16" Text="Create your account" HorizontalTextAlignment="Center"/>
                 </VerticalStackLayout>
                 
-
+                <!--First name & Last name input-->
+                <StackLayout Orientation="Horizontal">
+                    <Frame HasShadow="True" HeightRequest="56" BorderColor="White" CornerRadius="5" HorizontalOptions="FillAndExpand" Padding="0" Margin="10,0,0,0">
+                        <Entry x:Name="firstNameSignUp" Placeholder="Tên (*)" VerticalOptions="Center" Margin="20,0,0,0"/>
+                    </Frame>
+                    <Frame HasShadow="True" HeightRequest="56" BorderColor="White" CornerRadius="5" HorizontalOptions="FillAndExpand" Padding="0" Margin="-20,0,0,0">
+                        <Entry x:Name="lastNameSignUp" Placeholder="Họ (*)" VerticalOptions="Center" Margin="20,0,0,0"/>
+                    </Frame>
+                </StackLayout>
+                
+                <!--Email input for Sign up-->
                 <StackLayout Orientation="Horizontal">
                     <Frame ZIndex="1" HasShadow="True" HeightRequest="56" WidthRequest="56" CornerRadius="28" BorderColor="White">
                         <Image Source="user.png" HeightRequest="20" WidthRequest="20"/>
                     </Frame>
-
                     <Frame HasShadow="True" HeightRequest="45" BorderColor="White" CornerRadius="5" HorizontalOptions="FillAndExpand" Padding="0" Margin="-20,0,0,0">
                         <Entry x:Name="usernameSignUp" Placeholder="Enter your email (*)" Keyboard="Email"
                                     VerticalOptions="Center" Margin="20,0,0,0"/>
                     </Frame>
-
                 </StackLayout>
 
+                <!--Password input for Sign up-->
                 <StackLayout Orientation="Horizontal">
                     <Frame ZIndex="1" HasShadow="True" HeightRequest="56" WidthRequest="56" CornerRadius="28" BorderColor="White">
                         <Image Source="lock.png" HeightRequest="20" WidthRequest="20"/>
                     </Frame>
-
                     <Frame HasShadow="True" HeightRequest="45" BorderColor="White" CornerRadius="5" HorizontalOptions="FillAndExpand" Padding="0" Margin="-20,0,0,0">
-                        <Entry x:Name="passwordSignUp" Placeholder="Enter your password (*)" IsPassword="True"
+                        <Entry x:Name="passwordSignUp" Placeholder="Nhập mật khẩu (*)" IsPassword="True"
                                     VerticalOptions="Center" Margin="20,0,0,0"/>
                     </Frame>
-
                 </StackLayout>
 
+                <!--Password confirm input for Sign up-->
+                <StackLayout Orientation="Horizontal">
+                    <Frame ZIndex="1" HasShadow="True" HeightRequest="56" WidthRequest="56" CornerRadius="28" BorderColor="White">
+                        <Image Source="lock.png" HeightRequest="20" WidthRequest="20"/>
+                    </Frame>
+                    <Frame HasShadow="True" HeightRequest="45" BorderColor="White" CornerRadius="5" HorizontalOptions="FillAndExpand" Padding="0" Margin="-20,0,0,0">
+                        <Entry x:Name="passwordConfirmSignUp" Placeholder="Xác nhận lại (*)" IsPassword="True"
+                                VerticalOptions="Center" Margin="20,0,0,0"/>
+                    </Frame>
+                </StackLayout>
+
+                <!--Phone number for Sign up-->
+                <StackLayout Orientation="Horizontal">
+                    <Frame ZIndex="1" HasShadow="True" HeightRequest="56" WidthRequest="56" CornerRadius="28" BorderColor="White">
+                        <Image Source="lock.png" HeightRequest="20" WidthRequest="20"/>
+                    </Frame>
+                    <Frame HasShadow="True" HeightRequest="45" BorderColor="White" CornerRadius="5" HorizontalOptions="FillAndExpand" Padding="0" Margin="-20,0,0,0">
+                        <Entry x:Name="phoneSignUp" Placeholder="Số điện thoại (*)"
+                                VerticalOptions="Center" Margin="20,0,0,0" Keyboard="Telephone"
+                               TextChanged="OnPhoneTextChanged"/>
+                    </Frame>
+                </StackLayout>
+
+                <!--Date picker for Sign up-->  
+                <StackLayout Orientation="Horizontal">
+                    <Frame ZIndex="1" HasShadow="True" HeightRequest="56" WidthRequest="56" CornerRadius="28" BorderColor="White">
+                        <Image Source="lock.png" HeightRequest="20" WidthRequest="20"/>
+                    </Frame>
+                    <Frame HasShadow="True" HeightRequest="45" BorderColor="White" CornerRadius="5" HorizontalOptions="FillAndExpand" Padding="0" Margin="-20,0,0,0">
+                        <DatePicker x:Name="dateOfBirthSignUp" VerticalOptions="Center" Margin="20,0,0,0"/>
+                    </Frame>
+                </StackLayout>
+                <!--Remember check box-->
+                
                 <StackLayout Orientation="Horizontal">
                     <CheckBox x:Name="remember_but"></CheckBox>
                     <Label FontFamily="OpenSansRegular" TextColor="{StaticResource TextPrimaryColor}" 

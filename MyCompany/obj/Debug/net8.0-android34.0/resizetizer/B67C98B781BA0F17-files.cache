@@ -8,11 +8,15 @@ obj\Debug\net8.0-android34.0\resizetizer\r\drawable\dep_icon.png
 obj\Debug\net8.0-android34.0\resizetizer\r\drawable\dms_icon.png
 obj\Debug\net8.0-android34.0\resizetizer\r\drawable\flightstatusicon.png
 obj\Debug\net8.0-android34.0\resizetizer\r\drawable\gateicon.png
+obj\Debug\net8.0-android34.0\resizetizer\r\drawable\home_icon.png
 obj\Debug\net8.0-android34.0\resizetizer\r\drawable\lichbay_icon.png
 obj\Debug\net8.0-android34.0\resizetizer\r\drawable\link_icon.png
 obj\Debug\net8.0-android34.0\resizetizer\r\drawable\locationicon.png
 obj\Debug\net8.0-android34.0\resizetizer\r\drawable\lock.png
 obj\Debug\net8.0-android34.0\resizetizer\r\drawable\logo.png
+obj\Debug\net8.0-android34.0\resizetizer\r\drawable\notifications_icon.png
+obj\Debug\net8.0-android34.0\resizetizer\r\drawable\profile_icon.png
+obj\Debug\net8.0-android34.0\resizetizer\r\drawable\search_icon.png
 obj\Debug\net8.0-android34.0\resizetizer\r\drawable\shift_icon.png
 obj\Debug\net8.0-android34.0\resizetizer\r\drawable\stand_icon.png
 obj\Debug\net8.0-android34.0\resizetizer\r\drawable\team.png

@@ -4,11 +4,14 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MyCompany"
-    Shell.FlyoutBehavior="Flyout">
+    xmlns:view="clr-namespace:MyCompany">
+    
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+        <ShellContent Title="Trang chủ" ContentTemplate="{DataTemplate view:Menu}" Icon="home_icon.png"/>
+        <ShellContent Title="Tìm kiếm" ContentTemplate="{DataTemplate view:Views.SearchPage}" Icon="search_icon.png"/>
+        <ShellContent Title="Thông báo" ContentTemplate="{DataTemplate view:Views.NotificationPage}" Icon="notifications_icon.png"/>
+        <ShellContent Title="Cá nhân" ContentTemplate="{DataTemplate view:Views.ProfilePage}" Icon="profile_icon.png" />
+    </TabBar>
 
 </Shell>
