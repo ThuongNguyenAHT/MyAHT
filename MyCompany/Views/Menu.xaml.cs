@@ -185,6 +185,13 @@ public partial class Menu : ContentPage
             ShowNotification();
         }
     }
+    //Event button Setting
+    private async void OnSettingClicked(object sender, EventArgs e)
+    {
+        // Điều hướng đến trang Setting.xaml
+        await Navigation.PushAsync(new Setting());
+    }
+
     //Hiển thị thông báo đăng nhập thành công
     private async void ShowNotification()
     {

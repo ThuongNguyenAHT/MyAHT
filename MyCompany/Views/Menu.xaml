@@ -3,8 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:model="clr-namespace:MyCompany.Model"
              x:Class="MyCompany.Menu"
-             Shell.NavBarIsVisible="False">
-
+             Title="MyAHT">
+    <!-- Thêm ToolbarItem -->
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="setting_icon.png"
+                     Clicked="OnSettingClicked"/>
+    </ContentPage.ToolbarItems>
     <ScrollView>
         <Grid ColumnDefinitions="*"
                   ColumnSpacing="5"
@@ -17,7 +21,7 @@
               VerticalOptions="Start"
               IsVisible="False"
               Opacity="0"
-              Grid.Row="0">
+              Grid.Row="1">
                 <Label x:Name="NotificationLabel"
                    Text=""
                    TextColor="White"
@@ -25,12 +29,12 @@
                    VerticalOptions="Center"
                    FontSize="16"/>
             </Grid>
-            <Grid Grid.Row="1">
+            <Grid Grid.Row="2">
                 <Label Text="Công cụ" Padding="10" HorizontalTextAlignment="Center" Style="{StaticResource welcome_bigsize}"/>
             </Grid>
 
             <!-- Section for Company Tools -->
-            <Grid Grid.Row="2" VerticalOptions="Start" Margin="0,0,0,30">
+            <Grid Grid.Row="3" VerticalOptions="Start" Margin="0,0,0,30">
                 <CollectionView>
                     <CollectionView.ItemsSource>
                         <x:Array Type="{x:Type model:button_link}">
@@ -77,10 +81,10 @@
             </Grid>
 
             <!-- Section for Company NEWS -->
-            <Grid Grid.Row="3">
+            <Grid Grid.Row="4">
                 <Label x:Name="e_news_newscollection_label" Text="Tin tức" Padding="10" HorizontalTextAlignment="Center" Style="{StaticResource welcome_bigsize}"/>
             </Grid>
-            <Grid Grid.Row="4" VerticalOptions="Start">
+            <Grid Grid.Row="5" VerticalOptions="Start">
                 <CollectionView x:Name="e_news_newscollection" HeightRequest="300">
                     <CollectionView.ItemsLayout>
                         <GridItemsLayout Orientation="Horizontal" 
@@ -110,10 +114,10 @@
 
 
             <!-- Section for Company Survey -->
-            <Grid Grid.Row="5">
+            <Grid Grid.Row="6">
                 <Label x:Name="e_news_survey_label" Text="Khảo sát" Padding="10" HorizontalTextAlignment="Center" Style="{StaticResource welcome_bigsize}"/>
             </Grid>
-            <Grid Grid.Row="6" VerticalOptions="Start">
+            <Grid Grid.Row="7" VerticalOptions="Start">
                 <CollectionView x:Name="e_news_survey" HeightRequest="200">
                     <CollectionView.ItemsLayout>
                         <GridItemsLayout Orientation="Horizontal" 
@@ -142,7 +146,7 @@
             </Grid>
 
             <!-- Section for Company Other -->
-            <Grid Grid.Row="7">
+            <Grid Grid.Row="8">
                 <Label x:Name="e_news_other_label" Text="Khác" Padding="10" HorizontalTextAlignment="Center" Style="{StaticResource welcome_bigsize}"/>
             </Grid>
             <Grid Grid.Row="8" VerticalOptions="Start">

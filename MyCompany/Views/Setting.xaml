@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyCompany.Views.Setting"
+             Title="Cài đặt">
+    <StackLayout Padding="10" Spacing="10">
+        <!-- Tài khoản -->
+        <Frame HasShadow="True" CornerRadius="10" Padding="15">
+            <Grid>
+                <Image Source="shield_icon.png" VerticalOptions="Center" HorizontalOptions="Start" Margin="10"/>
+                <Label Text="Quản lý tài khoản" FontSize="16"  VerticalOptions="Center" HorizontalOptions="Center"/>
+                <Button Clicked="OnAccountManagementClicked" BackgroundColor="Transparent"/>
+            </Grid>
+        </Frame>
+    
+        <!-- Giao diện & ngôn ngữ -->
+        <Frame HasShadow="True" CornerRadius="10" Padding="15">
+            <Grid>
+                <Image Source="theme_icon.png" VerticalOptions="Center" HorizontalOptions="Start" Margin="10"/>
+                <Label Text="Giao diện và ngôn ngữ" FontSize="16"  VerticalOptions="Center" HorizontalOptions="Center"/>
+                <Button Clicked="OnThemeLanguageSelectionClicked" BackgroundColor="Transparent"/>
+            </Grid>
+        </Frame>
+        <!-- Cài đặt thông báo -->
+        <Frame HasShadow="True" CornerRadius="10" Padding="15">
+            <Grid>
+                <Image Source="notifications_icon.png" VerticalOptions="Center" HorizontalOptions="Start" Margin="10"/>
+                <Label Text="Cài đặt thông báo" FontSize="16"  VerticalOptions="Center" HorizontalOptions="Center"/>
+                <Button Clicked="OnNotificationSettingsClicked" BackgroundColor="Transparent"/>
+            </Grid>
+        </Frame>
+        
+
+        <!-- Backup & Restore -->
+        <Frame HasShadow="True" CornerRadius="10" Padding="15">
+            <Grid>
+                <Image Source="backup_icon.png" VerticalOptions="Center" HorizontalOptions="Start" Margin="10"/>
+                <Label Text="Sao lưu và khôi phục" FontSize="16"  VerticalOptions="Center" HorizontalOptions="Center"/>
+                <Button Clicked="OnBackupRestoreClicked" BackgroundColor="Transparent"/>
+            </Grid>
+        </Frame>
+
+        <!-- Help -->
+        <Frame HasShadow="True" CornerRadius="10" Padding="15">
+            <Grid>
+                <Image Source="question_icon.png" VerticalOptions="Center" HorizontalOptions="Start" Margin="10"/>
+                <Label Text="Hỗ trợ" FontSize="16"  VerticalOptions="Center" HorizontalOptions="Center"/>
+                <Button Clicked="OnUserGuideClicked" BackgroundColor="Transparent"/>
+            </Grid>
+        </Frame>
+
+        <!-- Questions -->
+        <Frame HasShadow="True" CornerRadius="10" Padding="15">
+            <Grid>
+                <Image Source="change_icon.png" VerticalOptions="Center" HorizontalOptions="Start" Margin="10"/>
+                <Label Text="Chuyển tài khoản" FontSize="16"  VerticalOptions="Center" HorizontalOptions="Center"/>
+                <Button Clicked="OnTransferAccountClicked" BackgroundColor="Transparent"/>
+            </Grid>
+        </Frame>
+    </StackLayout>
+</ContentPage>

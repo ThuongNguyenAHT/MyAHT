@@ -37,6 +37,27 @@
     <MauiXaml Update="Account\SignUp.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="ViewsSettingFunction\AccountManagementPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="ViewsSettingFunction\BackupRestorePage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="ViewsSettingFunction\NotificationSettingsPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="ViewsSettingFunction\SecuritySettingsPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="ViewsSettingFunction\ThemeLanguageSelectionPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="ViewsSettingFunction\TransferAccountPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="ViewsSettingFunction\UserGuidePage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Views\DMS_Detail.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
@@ -50,6 +71,9 @@
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Views\SearchPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Views\Setting.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Views\Shift_Search.xaml">
