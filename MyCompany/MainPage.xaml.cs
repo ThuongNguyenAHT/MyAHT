@@ -58,21 +58,15 @@ public partial class MainPage : ContentPage
     //Status Login
     async void SigninAsync(object sender, EventArgs e)
     {
-        username = usernamein.Text;
-        password = passwordin.Text;
-
-        // Kiểm tra email và mật khẩu
+        username = usernamein.Text?.Trim();
+        password = passwordin.Text?.Trim();
+        
         if (!IsValidEmail(username))
         {
             usernamein.TextColor = Colors.Red;
             emailErrorLabel.Text = "Email không hợp lệ. Vui lòng nhập lại";
             emailErrorLabel.IsVisible = true;
             return;
-        }
-        else
-        {
-            usernamein.TextColor = Colors.Black;
-            emailErrorLabel.IsVisible = false;
         }
 
         if (string.IsNullOrEmpty(password) || password.Length < 8)
@@ -82,21 +76,21 @@ public partial class MainPage : ContentPage
             passwordErrorLabel.IsVisible = true;
             return;
         }
-        else
-        {
-            passwordin.TextColor = Colors.Black;
-            passwordErrorLabel.IsVisible = false;
-        }
 
-        if (IsBusy)
-            return;
+        if (IsBusy) return;
 
         try
         {
             IsBusy = true;
-            ActivityIndicatorin.IsVisible = IsBusy;
-            ActivityIndicatorin.IsRunning = IsBusy;
+            ActivityIndicatorin.IsVisible = true;
+            ActivityIndicatorin.IsRunning = true;
+
+            // Khởi tạo lại LoginService nếu bị null
+            if (LoginService == null)
+                LoginService = new LoginService();
+            //Gọi API Login
             var result = await LoginService.OwinLogin(username, password);
+            Console.WriteLine("Kết quả đăng nhập: " + result); // Thêm dòng này để debug
             if (result.ToLower() == "true")
             {
                 statusout.Text = "Login thành công!";
@@ -113,22 +107,29 @@ public partial class MainPage : ContentPage
             {
                 string name = "login.txt";
                 string file = System.IO.Path.Combine(FileSystem.CacheDirectory, name);
-                var content = alphabet.EncodeBase64(remember_but.IsChecked.ToString()) + Environment.NewLine + alphabet.EncodeBase64(username) + Environment.NewLine + alphabet.EncodeBase64(password);
+                var content = alphabet.EncodeBase64("true") + Environment.NewLine +
+                              alphabet.EncodeBase64(username) + Environment.NewLine +
+                              alphabet.EncodeBase64(password);
                 System.IO.File.WriteAllText(file, content);
             }
         }
-        catch
+        catch (Exception ex)
         {
+            Console.WriteLine("Lỗi khi đăng nhập: " + ex.Message);
             statusout.Text = "Vui lòng kiểm tra lại kết nối mạng!";
             statusout.TextColor = Colors.Red;
         }
         finally
         {
             IsBusy = false;
-            ActivityIndicatorin.IsVisible = IsBusy;
-            ActivityIndicatorin.IsRunning = IsBusy;
+            ActivityIndicatorin.IsVisible = false;
+            ActivityIndicatorin.IsRunning = false;
         }
     }
+
+
+    //Status Logout
+    
 
     private void OnEntryUnfocused(object sender, FocusEventArgs e)
     { // Ẩn bàn phím

@@ -1,4 +1,8 @@
-namespace MyCompany.Views;
+
+using MyCompany.Views;
+
+
+namespace MyCompany;
 
 public partial class NotificationPage : ContentPage
 {

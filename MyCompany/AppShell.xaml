@@ -5,13 +5,13 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MyCompany"
     xmlns:view="clr-namespace:MyCompany">
-    
 
-    <TabBar>
-        <ShellContent Title="Trang chủ" ContentTemplate="{DataTemplate view:Menu}" Icon="home_icon.png"/>
-        <ShellContent Title="Tìm kiếm" ContentTemplate="{DataTemplate view:Views.SearchPage}" Icon="search_icon.png"/>
-        <ShellContent Title="Thông báo" ContentTemplate="{DataTemplate view:Views.NotificationPage}" Icon="notifications_icon.png"/>
-        <ShellContent Title="Cá nhân" ContentTemplate="{DataTemplate view:Views.ProfilePage}" Icon="profile_icon.png" />
-    </TabBar>
+    <ShellContent Route="MainPage" ContentTemplate="{DataTemplate local:MainPage}" />
+    
+    <ShellContent Title="Trang chủ" ContentTemplate="{DataTemplate view:Menu}" Icon="home_icon.png"/>
+    <!--<ShellContent Title="Tìm kiếm" ContentTemplate="{DataTemplate view:SearchPage}" Icon="search_icon.png"/>-->
+    <ShellContent Title="Thông báo" ContentTemplate="{DataTemplate view:NotificationPage}" Icon="notifications_icon.png"/>
+    <ShellContent Title="Cá nhân" ContentTemplate="{DataTemplate view:ProfilePage}" Icon="profile_icon.png" />
+    
 
 </Shell>

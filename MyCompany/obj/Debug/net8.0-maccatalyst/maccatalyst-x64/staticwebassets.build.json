@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "BHkIjXG0r+UNGFpRM4SgNYVav7tda/pKCFTgqlkxaLk=",
+  "Source": "MyCompany",
+  "BasePath": "/",
+  "Mode": "Root",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

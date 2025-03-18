@@ -1,0 +1,163 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0-maccatalyst
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MyCompany
+build_property.ProjectDir = T:\AHT_COMPANY\NewMyAHT\MyAHT\MyCompany\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[T:/AHT_COMPANY/NewMyAHT/MyAHT/MyCompany/Account/Login.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyCompany.Account.Login.xaml
+build_metadata.AdditionalFiles.TargetPath = Account\Login.xaml
+build_metadata.AdditionalFiles.RelativePath = Account\Login.xaml
+
+[T:/AHT_COMPANY/NewMyAHT/MyAHT/MyCompany/Account/SignUp.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyCompany.Account.SignUp.xaml
+build_metadata.AdditionalFiles.TargetPath = Account\SignUp.xaml
+build_metadata.AdditionalFiles.RelativePath = Account\SignUp.xaml
+
+[T:/AHT_COMPANY/NewMyAHT/MyAHT/MyCompany/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyCompany.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[T:/AHT_COMPANY/NewMyAHT/MyAHT/MyCompany/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyCompany.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[T:/AHT_COMPANY/NewMyAHT/MyAHT/MyCompany/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyCompany.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[T:/AHT_COMPANY/NewMyAHT/MyAHT/MyCompany/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyCompany.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[T:/AHT_COMPANY/NewMyAHT/MyAHT/MyCompany/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyCompany.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[T:/AHT_COMPANY/NewMyAHT/MyAHT/MyCompany/ViewsSettingFunction/AccountManagementPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyCompany.ViewsSettingFunction.AccountManagementPage.xaml
+build_metadata.AdditionalFiles.TargetPath = ViewsSettingFunction\AccountManagementPage.xaml
+build_metadata.AdditionalFiles.RelativePath = ViewsSettingFunction\AccountManagementPage.xaml
+
+[T:/AHT_COMPANY/NewMyAHT/MyAHT/MyCompany/ViewsSettingFunction/BackupRestorePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyCompany.ViewsSettingFunction.BackupRestorePage.xaml
+build_metadata.AdditionalFiles.TargetPath = ViewsSettingFunction\BackupRestorePage.xaml
+build_metadata.AdditionalFiles.RelativePath = ViewsSettingFunction\BackupRestorePage.xaml
+
+[T:/AHT_COMPANY/NewMyAHT/MyAHT/MyCompany/ViewsSettingFunction/NotificationSettingsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyCompany.ViewsSettingFunction.NotificationSettingsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = ViewsSettingFunction\NotificationSettingsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = ViewsSettingFunction\NotificationSettingsPage.xaml
+
+[T:/AHT_COMPANY/NewMyAHT/MyAHT/MyCompany/ViewsSettingFunction/SecuritySettingsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyCompany.ViewsSettingFunction.SecuritySettingsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = ViewsSettingFunction\SecuritySettingsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = ViewsSettingFunction\SecuritySettingsPage.xaml
+
+[T:/AHT_COMPANY/NewMyAHT/MyAHT/MyCompany/ViewsSettingFunction/ThemeLanguageSelectionPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyCompany.ViewsSettingFunction.ThemeLanguageSelectionPage.xaml
+build_metadata.AdditionalFiles.TargetPath = ViewsSettingFunction\ThemeLanguageSelectionPage.xaml
+build_metadata.AdditionalFiles.RelativePath = ViewsSettingFunction\ThemeLanguageSelectionPage.xaml
+
+[T:/AHT_COMPANY/NewMyAHT/MyAHT/MyCompany/ViewsSettingFunction/TransferAccountPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyCompany.ViewsSettingFunction.TransferAccountPage.xaml
+build_metadata.AdditionalFiles.TargetPath = ViewsSettingFunction\TransferAccountPage.xaml
+build_metadata.AdditionalFiles.RelativePath = ViewsSettingFunction\TransferAccountPage.xaml
+
+[T:/AHT_COMPANY/NewMyAHT/MyAHT/MyCompany/ViewsSettingFunction/UserGuidePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyCompany.ViewsSettingFunction.UserGuidePage.xaml
+build_metadata.AdditionalFiles.TargetPath = ViewsSettingFunction\UserGuidePage.xaml
+build_metadata.AdditionalFiles.RelativePath = ViewsSettingFunction\UserGuidePage.xaml
+
+[T:/AHT_COMPANY/NewMyAHT/MyAHT/MyCompany/Views/DMS_Detail.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyCompany.Views.DMS_Detail.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\DMS_Detail.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\DMS_Detail.xaml
+
+[T:/AHT_COMPANY/NewMyAHT/MyAHT/MyCompany/Views/DMS_Search.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyCompany.Views.DMS_Search.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\DMS_Search.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\DMS_Search.xaml
+
+[T:/AHT_COMPANY/NewMyAHT/MyAHT/MyCompany/Views/Flights.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyCompany.Views.Flights.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Flights.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Flights.xaml
+
+[T:/AHT_COMPANY/NewMyAHT/MyAHT/MyCompany/Views/Menu.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyCompany.Views.Menu.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Menu.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Menu.xaml
+
+[T:/AHT_COMPANY/NewMyAHT/MyAHT/MyCompany/Views/NotificationPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyCompany.Views.NotificationPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\NotificationPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\NotificationPage.xaml
+
+[T:/AHT_COMPANY/NewMyAHT/MyAHT/MyCompany/Views/ProfilePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyCompany.Views.ProfilePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ProfilePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ProfilePage.xaml
+
+[T:/AHT_COMPANY/NewMyAHT/MyAHT/MyCompany/Views/SearchPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyCompany.Views.SearchPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\SearchPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\SearchPage.xaml
+
+[T:/AHT_COMPANY/NewMyAHT/MyAHT/MyCompany/Views/Setting.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyCompany.Views.Setting.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Setting.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Setting.xaml
+
+[T:/AHT_COMPANY/NewMyAHT/MyAHT/MyCompany/Views/Shift_Search.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyCompany.Views.Shift_Search.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Shift_Search.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Shift_Search.xaml
+
+[T:/AHT_COMPANY/NewMyAHT/MyAHT/MyCompany/Views/Shortcut.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyCompany.Views.Shortcut.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Shortcut.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Shortcut.xaml
