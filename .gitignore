@@ -1,2 +1,3 @@
-MyCompany/bin/Debug/net8.0-android/*.apk
+MyCompany/obj/
+MyCompany/bin/
 .vs/
