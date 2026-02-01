@@ -1,0 +1,54 @@
+# MyAHT Configuration Files
+
+# appsettings.json - Chứa connection string thật
+# appsettings.json - Contains real connection strings
+appsettings.json
+appsettings.Development.json
+appsettings.Production.json
+
+# User secrets
+secrets.json
+
+# Database files
+*.db
+*.db-shm
+*.db-wal
+*.mdf
+*.ldf
+
+# Build artifacts
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+
+# IDE
+.vs/
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Packages
+node_modules/
+packages/
+*.nupkg
+
+# Logs
+logs/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+*~
