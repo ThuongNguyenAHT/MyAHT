@@ -176,6 +176,6 @@ catch (Exception ex)
 ```
 
 ## Tài nguyên tham khảo (References)
-- [Microsoft Docs - Connection Strings](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/connection-strings)
-- [Entity Framework Core Docs](https://docs.microsoft.com/en-us/ef/core/)
+- [Microsoft Docs - Connection Strings](https://learn.microsoft.com/en-us/dotnet/framework/data/adonet/connection-strings)
+- [Entity Framework Core Docs](https://learn.microsoft.com/en-us/ef/core/)
 - [Dapper Documentation](https://github.com/DapperLib/Dapper)

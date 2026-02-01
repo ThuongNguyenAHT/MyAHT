@@ -443,6 +443,6 @@ Nếu vẫn gặp vấn đề:
 
 ## Resources
 
-- [SQL Server Error Messages](https://docs.microsoft.com/sql/relational-databases/errors-events/database-engine-events-and-errors)
-- [EF Core Troubleshooting](https://docs.microsoft.com/ef/core/miscellaneous/logging-events-diagnostics)
+- [SQL Server Error Messages](https://learn.microsoft.com/en-us/sql/relational-databases/errors-events/database-engine-events-and-errors)
+- [EF Core Troubleshooting](https://learn.microsoft.com/en-us/ef/core/miscellaneous/logging-events-diagnostics)
 - [Connection String Reference](https://www.connectionstrings.com/)

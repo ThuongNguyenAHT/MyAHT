@@ -310,7 +310,7 @@ else
 
 ## Resources
 
-- [Microsoft SQL Server Docs](https://docs.microsoft.com/sql/)
-- [Entity Framework Core Docs](https://docs.microsoft.com/ef/core/)
+- [Microsoft SQL Server Docs](https://learn.microsoft.com/en-us/sql/)
+- [Entity Framework Core Docs](https://learn.microsoft.com/en-us/ef/core/)
 - [Dapper GitHub](https://github.com/DapperLib/Dapper)
 - [Connection Strings Reference](https://www.connectionstrings.com/)
