@@ -5,7 +5,10 @@ The application only staff
 
 Dự án này cung cấp tài liệu chi tiết và ví dụ code về cách kết nối với các loại database phổ biến trong .NET/C#.
 
-### 🚀 Quick Start
+### 📚 Complete Documentation
+**Xem toàn bộ tài liệu và learning paths:** [INDEX.md](INDEX.md) - Mục lục đầy đủ
+
+## 🚀 Quick Start
 **Bắt đầu nhanh trong 5 phút:** [QUICK_START.md](QUICK_START.md)
 
 ### 📖 Tài liệu chi tiết
